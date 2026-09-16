@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Lar Verde</title>
+<meta name="description" content="A Política de Privacidade do Lar Verde explica como coletamos, utilizamos e protegemos dados pessoais dos usuários, em conformidade com a LGPD e o Google AdSense.">
+<link rel="canonical" href="https://larverde.com.br/politica-de-privacidade/">
+<meta property="og:title" content="Política de Privacidade — Lar Verde">
+<meta property="og:description" content="A Política de Privacidade do Lar Verde explica como coletamos, utilizamos e protegemos dados pessoais dos usuários, em conformidade com a LGPD e o Google AdSense.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://larverde.com.br/politica-de-privacidade/">
+<link rel="icon" href="/assets/images/cropped-logo-2.png">
+<style>
+:root{--green:#2f6b3f;--green-dark:#1f4a2b;--cream:#f7f5ef;--text:#2b2b26;--muted:#6b6b60;--border:#e4e0d4;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{color:var(--green-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header.site{background:var(--green-dark);color:#fff;padding:16px 0}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+header.site a{color:#fff}
+.brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
+.brand img{width:36px;height:36px;border-radius:8px}
+nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+main{padding:36px 0 60px}
+.hero{padding:0 0 22px}
+.hero h1{font-size:1.7rem;margin:0 0 4px}
+.hero p{color:var(--muted);margin:0}
+.layout{display:flex;gap:44px;align-items:flex-start}
+.col-main{flex:2;min-width:0}
+.col-side{flex:1;min-width:260px;max-width:300px}
+
+/* post list card */
+.postcard{margin-bottom:44px;padding-bottom:38px;border-bottom:1px solid var(--border)}
+.postcard:last-child{border-bottom:none}
+.postcard .cats{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.postcard .cats a{color:var(--green)}
+.postcard .cats a:not(:last-child)::after{content:", "}
+.postcard h2{font-size:1.5rem;margin:0 0 16px;line-height:1.3}
+.postcard h2 a{color:var(--text)}
+.postcard .thumb{margin-bottom:16px}
+.postcard .thumb img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.postcard .excerpt{color:#444;margin-bottom:12px}
+.postcard .byline{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* article */
+article.post{max-width:100%}
+article.post .cats{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+article.post .cats a{color:var(--green)}
+article.post .cats a:not(:last-child)::after{content:", "}
+article.post h1{font-size:2rem;margin:0 0 10px;line-height:1.25}
+article.post .byline{font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+article.post .cover{margin:0 0 26px}
+article.post .content h2{font-size:1.35rem;margin-top:1.8em}
+article.post .content h3{font-size:1.1rem;margin-top:1.5em}
+article.post .content p{margin:1em 0}
+article.post .content ul,article.post .content ol{padding-left:1.4em}
+article.post .content figure{margin:1.6em 0}
+
+.page-content h1{font-size:1.8rem}
+
+/* sidebar */
+.widget{margin-bottom:34px}
+.widget h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.search-form{display:flex;gap:0}
+.search-form input{flex:1;padding:9px 10px;border:1px solid var(--border);border-radius:4px 0 0 4px;font-size:.9rem}
+.search-form button{background:var(--green);color:#fff;border:none;padding:9px 14px;border-radius:0 4px 4px 0;cursor:pointer;font-size:.9rem}
+.recent-item{display:flex;gap:12px;margin-bottom:14px}
+.recent-item img{width:60px;height:60px;object-fit:cover;flex-shrink:0}
+.recent-item .t{font-size:.85rem;line-height:1.35}
+.recent-item .t a{color:var(--text)}
+.archive-list, .cat-list{list-style:none;margin:0;padding:0;font-size:.9rem}
+.archive-list li, .cat-list li{margin-bottom:8px;display:flex;justify-content:space-between}
+.cat-list .count{color:var(--muted);font-size:.82rem}
+
+/* pagination */
+.pagination{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.pagination a,.pagination span{padding:8px 14px;border:1px solid var(--border);border-radius:6px;font-size:.88rem}
+.pagination .current{background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+
+footer.site{background:var(--green-dark);color:#d8e6da;padding:30px 0;margin-top:40px;font-size:.9rem}
+footer.site a{color:#fff}
+footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+.backlink{display:inline-block;margin-top:30px}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
+@media (max-width:640px){nav.cats{display:none}}
+</style>
+
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
+  </div>
+</header>
+<main><div class="wrap">
+<div class="layout"><div class="col-main"><div class="page-content"><h1>Política de Privacidade</h1><p>A sua privacidade é importante para nós. É política do <strong>Lar Verde</strong> respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site <strong>Lar Verde</strong> e em outros sites que possuímos e operamos.</p>
+
+
+
+<p>Solicitamos informações pessoais apenas quando realmente precisamos delas para fornecer um serviço ao usuário. Fazemos isso por meios justos e legais, com o seu conhecimento e consentimento, informando de forma clara por que estamos coletando os dados e como eles serão utilizados.</p>
+
+
+
+<p>As informações coletadas são retidas apenas pelo tempo necessário para cumprir as finalidades para as quais foram obtidas. Quando armazenamos dados, utilizamos meios comercialmente aceitáveis para protegê-los contra perdas, roubos, acessos não autorizados, divulgação, cópia, uso ou modificação indevida.</p>
+
+
+
+<p>Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei ou quando necessário para a prestação dos serviços descritos nesta política.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Links para sites externos</strong></h2>
+
+
+
+<p>O site <strong>Lar Verde</strong> pode conter links para sites externos que não são operados por nós. Não temos controle sobre o conteúdo e as práticas desses sites e não podemos assumir responsabilidade por suas respectivas políticas de privacidade.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Coleta e uso de informações</strong></h2>
+
+
+
+<p>O usuário é livre para recusar a solicitação de informações pessoais, entendendo que, nesses casos, alguns serviços ou funcionalidades do site podem não estar disponíveis.</p>
+
+
+
+<p>O tratamento de dados pessoais e o uso de cookies ocorrerão conforme as <strong>preferências de consentimento definidas pelo usuário</strong> por meio do aviso de cookies exibido no site.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Cookies e tecnologias de rastreamento</strong></h2>
+
+
+
+<p>Utilizamos cookies e tecnologias semelhantes para:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Melhorar a experiência do usuário;</li>
+
+
+
+<li>Analisar o tráfego e o desempenho do site;</li>
+
+
+
+<li>Exibir conteúdos e anúncios relevantes.</li>
+</ul>
+
+
+
+<p>O usuário pode, a qualquer momento, desativar ou restringir o uso de cookies por meio das configurações do seu navegador. A desativação de cookies pode impactar o funcionamento de algumas funcionalidades do site.</p>
+
+
+
+<h2 class="wp-block-heading"><strong>Google AdSense</strong></h2>
+
+
+
+<p>O <strong>Lar Verde</strong> utiliza o serviço <strong>Google AdSense</strong>, fornecido pela Google Inc., para a veiculação de publicidade.</p>
+
+
+
+<p>O Google AdSense utiliza cookies, incluindo o cookie <strong>DoubleClick</strong>, para exibir anúncios mais relevantes aos usuários, com base em visitas anteriores a este ou a outros sites, bem como para limitar a repetição de anúncios.</p>
+
+
+
+<p>Os usuários podem optar por desativar a publicidade personalizada acessando as <strong>Configurações de anúncios do Google</strong>.<br>Mais informações sobre como o Google utiliza dados de sites que usam seus serviços podem ser encontradas nas políticas oficiais da empresa.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Cookies de publicidade e afiliados</strong></h2>
+
+
+
+<p>Utilizamos anúncios para ajudar a compensar os custos de funcionamento do site e financiar futuros desenvolvimentos.</p>
+
+
+
+<p>Cookies de publicidade comportamental podem ser utilizados para exibir anúncios relevantes, rastreando anonimamente os interesses dos usuários.</p>
+
+
+
+<p>Cookies de rastreamento de afiliados podem ser utilizados para identificar se um visitante acessou o site por meio de um parceiro afiliado, permitindo o correto crédito de indicações e, quando aplicável, a oferta de promoções.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Direitos do titular dos dados</strong></h2>
+
+
+
+<p>O titular dos dados pessoais pode, a qualquer momento:</p>
+
+
+
+<ul class="wp-block-list">
+<li>Solicitar acesso aos seus dados;</li>
+
+
+
+<li>Solicitar correção ou atualização;</li>
+
+
+
+<li>Solicitar anonimização ou exclusão;</li>
+
+
+
+<li>Revogar consentimentos previamente concedidos.</li>
+</ul>
+
+
+
+<p>Essas solicitações podem ser feitas por meio do canal de contato informado nesta política.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Compromisso do Usuário</strong></h2>
+
+
+
+<p>O usuário se compromete a fazer uso adequado dos conteúdos e das informações que o <strong>Lar Verde</strong> oferece no site, incluindo, mas não se limitando a:</p>
+
+
+
+<p>A) Não se envolver em atividades ilegais ou contrárias à boa-fé e à ordem pública;<br>B) Não difundir conteúdos de natureza racista, xenofóbica, de jogos de azar, pornografia ilegal, apologia ao terrorismo ou contra os direitos humanos;<br>C) Não causar danos aos sistemas físicos (hardware) e lógicos (software) do <strong>Lar Verde</strong>, de seus fornecedores ou de terceiros, incluindo a disseminação de vírus ou outros sistemas nocivos.<br><strong>Base legal</strong></p>
+
+
+
+<p>Esta política está em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018 – LGPD)</strong> e, quando aplicável, com o <strong>Regulamento Geral sobre a Proteção de Dados (GDPR)</strong>.</p>
+
+
+
+<p>As bases legais para o tratamento de dados pessoais incluem, conforme o caso, o <strong>consentimento do titular</strong>, o <strong>legítimo interesse do controlador</strong> e o <strong>cumprimento de obrigações legais</strong>.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<h2 class="wp-block-heading"><strong>Mais informações</strong></h2>
+
+
+
+<p>Esperamos que esta política esteja clara. Caso o usuário tenha dúvidas sobre a necessidade de determinados cookies ou tecnologias, geralmente é mais seguro manter as configurações padrão ao interagir com os recursos disponíveis no site.</p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p><strong>Contato</strong>:</p>
+
+
+
+<p>📧 <a href="mailto:contato@larverde.com.br">contato@larverde.com.br</a></p>
+
+
+
+<h2 class="wp-block-heading">Veja também:</h2>
+
+
+
+<p><br><a href="https://gardenpulse.sussamgt.com.br/termos-de-uso/">Termos de Uso</a><br><a href="https://gardenpulse.sussamgt.com.br/transparencia/">Página de Transparência</a><br><a href="https://gardenpulse.sussamgt.com.br/sobre/">Sobre o Lar Verde</a><br><a href="https://gardenpulse.sussamgt.com.br/contato/">Contato</a><br></p>
+
+
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+
+
+<p>📅 <strong>Esta política é efetiva a partir de 23 de dezembro de 2025.</strong></p></div></div>
+<aside class="col-side">
+  <div class="widget">
+    <h3>Pesquisar</h3>
+    <form class="search-form" action="/busca/" method="get">
+      <input type="text" name="q" placeholder="Buscar no blog...">
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+  <div class="widget">
+    <h3>Posts recentes</h3>
+    
+    <div class="recent-item">
+      <img src="/assets/images/horta-vertical-varanda-apartamento.webp" alt="">
+      <div class="t"><a href="/como-criar-sua-horta-vertical-e-cultivar-alimentos-em-pouco-espaco/">Como Criar sua Horta Vertical e Cultivar Alimentos em Pouco Espaço</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/compostagem-domestica-passo-a-passo.webp" alt="">
+      <div class="t"><a href="/compostagem-domestica-passo-a-passo/">Compostagem doméstica: passo a passo fácil para iniciantes e transforme seus resíduos em adubo</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="">
+      <div class="t"><a href="/cultivar-temperos-em-apartamento-pequeno/">🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/horta-caseira-guia-completo.webp" alt="">
+      <div class="t"><a href="/horta-caseira-guia-completo/">Horta Caseira: Guia Completo para Montar a Sua do Zero</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="">
+      <div class="t"><a href="/plantas-para-escritorio-home-office/">Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="">
+      <div class="t"><a href="/animais-estimacao-plantas/">Como Cuidar de Animais de Estimação e Plantas em Casa</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="">
+      <div class="t"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/">Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="">
+      <div class="t"><a href="/organizar-cuidar-ferramentas-jardim/">Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios</a></div>
+    </div>
+  </div>
+  <div class="widget">
+    <h3>Arquivos</h3>
+    <ul class="archive-list"><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">7</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">37</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">4</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">2</span></li></ul>
+  </div>
+  <div class="widget">
+    <h3>Categorias</h3>
+    <ul class="cat-list"><li><a href="/categoria/casa-jardim/">Casa & Jardim</a> <span class="count">21</span></li><li><a href="/categoria/cuidados-com-plantas/">Cuidados com plantas</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a> <span class="count">4</span></li><li><a href="/categoria/flores-e-arranjos/">Flores e Arranjos</a> <span class="count">1</span></li><li><a href="/categoria/horta-caseira-e-ervas/">Horta caseira e ervas</a> <span class="count">1</span></li><li><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a> <span class="count">6</span></li><li><a href="/categoria/hortas-urbanas/">Hortas urbanas</a> <span class="count">2</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">22</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a> <span class="count">2</span></li><li><a href="/categoria/jardins-urbanos/">Jardins Urbanos</a> <span class="count">1</span></li><li><a href="/categoria/jardins-e-paisagismo/">Jardins e Paisagismo</a> <span class="count">1</span></li><li><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a> <span class="count">6</span></li><li><a href="/categoria/plantas-de-interior/">Plantas de interior</a> <span class="count">8</span></li><li><a href="/categoria/pragas-e-manejo-natural/">Pragas e manejo natural</a> <span class="count">1</span></li><li><a href="/categoria/quartos-e-ambientes-compactos/">Quartos e Ambientes Compactos</a> <span class="count">1</span></li><li><a href="/categoria/saude-e-bem-estar/">Saúde e Bem estar</a> <span class="count">2</span></li><li><a href="/categoria/saude-mental/">Saúde mental</a> <span class="count">1</span></li><li><a href="/categoria/sem-categoria/">Sem categoria</a> <span class="count">5</span></li><li><a href="/categoria/sustentabilidade/">Sustentabilidade</a> <span class="count">6</span></li><li><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a> <span class="count">2</span></li></ul>
+  </div>
+</aside></div>
+</div></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; larverde.com.br — Jardinagem, plantas e casa com vida</div>
+    <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
+  </div>
+</footer>
+</body>
+</html>
