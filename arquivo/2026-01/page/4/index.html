@@ -63,6 +63,16 @@ article.post .content figure{margin:1.6em 0}
 
 .page-content h1{font-size:1.8rem}
 
+/* author box + related posts */
+.author-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin:36px 0}
+.author-box .avatar{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;flex-shrink:0}
+.author-box h4{margin:0 0 6px;font-size:1rem}
+.author-box p{margin:0;color:var(--muted);font-size:.92rem}
+.related{margin:36px 0}
+.related h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{margin-bottom:8px}
+
 /* sidebar */
 .widget{margin-bottom:34px}
 .widget h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
@@ -105,26 +115,26 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
-    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
+    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/bem-estar/">Bem-estar</a></nav>
   </div>
 </header>
 <main><div class="wrap">
 <div class="layout"><div class="col-main">
 <div class="hero"><h1>Janeiro de 2026</h1><p>37 artigo(s) publicados em Janeiro de 2026</p></div>
 <div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
+  <div class="cats"><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivo-temperos-espacos-reduzidos/">Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta</a></h2>
   <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que comecei o cultivo de temperos em espaços reduzidos. Vou começar confessando uma coisa: minha primeira mini-horta morreu em 21 dias. Manjericão esturricado, cebolinha amarela, alecrim triste. T</div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/cantinho-verde-dentro-de-casa/">Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)</a></h2>
   <div class="thumb"><a href="/cantinho-verde-dentro-de-casa/"><img src="/assets/images/cantinho-verde-dentro-de-casa-apartamento.webp" alt="Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">O dia em que percebi que minha casa precisava de um cantinho verde. Lembro exatamente do momento. Era, aliás, fim de tarde, computador ligado, café frio ao lado, e aquela sensação estranha de cansaço </div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
+  <div class="cats"><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/suculentas-raras/">Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva</a></h2>
   <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Quando descobri o universo das suculentas raras. A primeira vez que ouvi o termo suculentas raras , confesso: achei exagero de vendedor de feira. Planta é planta, pensei. Algumas mais bonitas, outras </div>
@@ -142,13 +152,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="excerpt">Por alguém que matou suculentas "por amor" (e aprendeu a deixá-las em paz). Introdução: A Verdade Inconveniente Sobre Suculentas. Por Que Tanta Gente "Mata" Suculentas Sem Querer?. Se você já perdeu u</div>
   <div class="byline">Marcos Kulenkampff &middot; 02/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/cactos-ornamentais/">Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo</a></h2>
   <div class="thumb"><a href="/cactos-ornamentais/"><img src="/assets/images/cactos-ornamentais-decoracao-sala-moderna.webp" alt="Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Quando o espinho vira poesia. Confesso: durante muito tempo eu subestimei os cactos ornamentais. Por isso, achava que eram plantas "duras demais", sem delicadeza. No entanto, tudo mudou no dia em que </div>
   <div class="byline">Marcos Kulenkampff &middot; 02/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/plantas-faceis-para-iniciantes/">Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem</a></h2>
   <div class="thumb"><a href="/plantas-faceis-para-iniciantes/"><img src="/assets/images/plantas-faceis-para-iniciantes-apartamento.webp" alt="Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por alguém que também matou plantas no começo (e aprendeu na prática) . A Verdade Que Ninguém Te Conta Sobre Jardinagem. Todo Mundo Começa Matando Uma Planta (Eu Também). Se você chegou até aqui, prov</div>
@@ -206,7 +216,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   </div>
   <div class="widget">
     <h3>Categorias</h3>
-    <ul class="cat-list"><li><a href="/categoria/casa-jardim/">Casa & Jardim</a> <span class="count">21</span></li><li><a href="/categoria/cuidados-com-plantas/">Cuidados com plantas</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a> <span class="count">4</span></li><li><a href="/categoria/flores-e-arranjos/">Flores e Arranjos</a> <span class="count">1</span></li><li><a href="/categoria/horta-caseira-e-ervas/">Horta caseira e ervas</a> <span class="count">1</span></li><li><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a> <span class="count">6</span></li><li><a href="/categoria/hortas-urbanas/">Hortas urbanas</a> <span class="count">2</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">22</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a> <span class="count">2</span></li><li><a href="/categoria/jardins-urbanos/">Jardins Urbanos</a> <span class="count">1</span></li><li><a href="/categoria/jardins-e-paisagismo/">Jardins e Paisagismo</a> <span class="count">1</span></li><li><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a> <span class="count">6</span></li><li><a href="/categoria/plantas-de-interior/">Plantas de interior</a> <span class="count">8</span></li><li><a href="/categoria/pragas-e-manejo-natural/">Pragas e manejo natural</a> <span class="count">1</span></li><li><a href="/categoria/quartos-e-ambientes-compactos/">Quartos e Ambientes Compactos</a> <span class="count">1</span></li><li><a href="/categoria/saude-e-bem-estar/">Saúde e Bem estar</a> <span class="count">2</span></li><li><a href="/categoria/saude-mental/">Saúde mental</a> <span class="count">1</span></li><li><a href="/categoria/sem-categoria/">Sem categoria</a> <span class="count">5</span></li><li><a href="/categoria/sustentabilidade/">Sustentabilidade</a> <span class="count">6</span></li><li><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a> <span class="count">2</span></li></ul>
+    <ul class="cat-list"><li><a href="/categoria/bem-estar/">Bem-estar</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">6</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">9</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">41</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">12</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">19</span></li></ul>
   </div>
 </aside></div>
 </div></main>

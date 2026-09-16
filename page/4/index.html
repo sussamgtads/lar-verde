@@ -63,6 +63,16 @@ article.post .content figure{margin:1.6em 0}
 
 .page-content h1{font-size:1.8rem}
 
+/* author box + related posts */
+.author-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin:36px 0}
+.author-box .avatar{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;flex-shrink:0}
+.author-box h4{margin:0 0 6px;font-size:1rem}
+.author-box p{margin:0;color:var(--muted);font-size:.92rem}
+.related{margin:36px 0}
+.related h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{margin-bottom:8px}
+
 /* sidebar */
 .widget{margin-bottom:34px}
 .widget h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
@@ -105,68 +115,68 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
-    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
+    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/bem-estar/">Bem-estar</a></nav>
   </div>
 </header>
 <main><div class="wrap">
 <div class="layout"><div class="col-main">
 <div class="hero"><h1>Lar Verde</h1><p>Jardinagem, plantas e casa com vida</p></div>
 <div class="postcard">
-  <div class="cats"><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/jardins-urbanos/">Jardins Urbanos</a><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a></div>
+  <div class="cats"><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/jardins-verticais-para-pequenos-espacos/">Jardins verticais para pequenos espaços: o que são e por que apostar neles?</a></h2>
   <div class="thumb"><a href="/jardins-verticais-para-pequenos-espacos/"><img src="/assets/images/jardim-vertical-sala-apartamento-pequeno.webp" alt="Jardins verticais para pequenos espaços: o que são e por que apostar neles?" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Introdução: quando o chão acaba, a parede começa 🌱. Vou confessar uma coisa: meu primeiro jardim vertical nasceu de frustração. Eu morava num apê de 42 m², sol entrando só pela manhã, e uma vontade en</div>
   <div class="byline">Marcos Kulenkampff &middot; 09/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/cuidados-essenciais-plantas-de-interior/">Cuidados Essenciais para Plantas de Interior: Guia Completo</a></h2>
   <div class="thumb"><a href="/cuidados-essenciais-plantas-de-interior/"><img src="/assets/images/plantas-de-interior-sala-luz-natural.webp" alt="Cuidados Essenciais para Plantas de Interior: Guia Completo" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Plantas não são decoração, são presença viva. A primeira coisa que aprendi — e demorei anos para aceitar — é que plantas de interior não querem "sobreviver" na sua casa. Na verdade, elas querem viver </div>
   <div class="byline">Marcos Kulenkampff &middot; 08/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/plantas-que-purificam-o-ar/">Plantas que Purificam o Ar: Guia Completo para um Lar Mais Saudável</a></h2>
   <div class="thumb"><a href="/plantas-que-purificam-o-ar/"><img src="/assets/images/sala-estar-plantas-purificam-ar.webp" alt="Plantas que Purificam o Ar: Guia Completo para um Lar Mais Saudável" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">A descoberta que mudou minha relação com o ar de casa. A primeira vez que me dei conta de que o ar dentro de casa podia ser pior do que o da rua foi numa madrugada qualquer, janela fechada, cheiro est</div>
   <div class="byline">Marcos Kulenkampff &middot; 08/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/como-montar-comedouro-de-passaros-caseiro/">Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza</a></h2>
   <div class="thumb"><a href="/como-montar-comedouro-de-passaros-caseiro/"><img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Como Fazer um Comedouro de Pássaros Caseiro Que Realmente Funciona (Aprendi na Marra) Sabe aquela manhã de domingo em que você toma café olhando pela janela e pensa "seria tão legal ver mais pássaros </div>
   <div class="byline">Marcos Kulenkampff &middot; 07/03/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a><a href="/categoria/quartos-e-ambientes-compactos/">Quartos e Ambientes Compactos</a></div>
+  <div class="cats"><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a></div>
   <h2><a href="/decorar-quartos-pequenos/">Ideias Criativas para Decorar Quartos Pequenos: Guia Completo</a></h2>
   <div class="thumb"><a href="/decorar-quartos-pequenos/"><img src="/assets/images/quarto-pequeno-decorado-luz-natural.webp" alt="Ideias Criativas para Decorar Quartos Pequenos: Guia Completo" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Introdução: quando o quarto é pequeno, mas a vida não. Durante muito tempo, confesso, tratei quarto pequeno como problema. Algo a ser "resolvido" com truques rápidos: espelho aqui, cor clara ali, e pr</div>
   <div class="byline">Marcos Kulenkampff &middot; 07/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a></div>
+  <div class="cats"><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/decorar-varandas-pequenas/">Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço</a></h2>
   <div class="thumb"><a href="/decorar-varandas-pequenas/"><img src="/assets/images/varanda-pequena-decorada-plantas-apartamento.webp" alt="Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que resolvi escrever sobre decorar varandas pequenas. Vou ser completamente transparente com você: durante anos eu literalmente ignorei minha varanda. Era pequena demais, estreita demais, "não val</div>
   <div class="byline">Marcos Kulenkampff &middot; 07/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/flores-para-cultivar-em-apartamento/">Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados</a></h2>
   <div class="thumb"><a href="/flores-para-cultivar-em-apartamento/"><img src="/assets/images/flores-em-apartamento-luz-natural.webp" alt="Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que eu comecei a cultivar flores em apartamento. Vou ser sincera com você: durante anos, achei que flores eram coisa de casa com quintal. Morando em apartamento desde os 22 anos, eu me conformei c</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/terrarios-passo-a-passo-montar-cuidar/">Terrários: passo a passo para montar e cuidar com sucesso</a></h2>
   <div class="thumb"><a href="/terrarios-passo-a-passo-montar-cuidar/"><img src="/assets/images/terrario-fechado-mesa-madeira.webp" alt="Terrários: passo a passo para montar e cuidar com sucesso" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que comecei a montar terrários (e por que você deveria tentar). Olha só… poucas coisas me ensinaram tanto sobre equilíbrio quanto os terrários. Talvez porque eles não perdoem exageros. Água demais</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a></div>
+  <div class="cats"><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/como-ampliar-ambientes-pequenos/">Como Ampliar Ambientes Pequenos: 5 Truques Infalíveis</a></h2>
   <div class="thumb"><a href="/como-ampliar-ambientes-pequenos/"><img src="/assets/images/ambiente-pequeno-luz-natural.webp" alt="Como Ampliar Ambientes Pequenos: 5 Truques Infalíveis" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que alguns ambientes parecem menores do que realmente são?. Tem dias em que a casa parece menor do que realmente é. Já sentiu isso?. Não é só impressão. Na verdade, ambientes pequenos encolhem qua</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
-  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/economize-agua-no-cultivo-sustentabilidade/">Economize Água no Cultivo: Dicas Práticas para Sustentabilidade</a></h2>
   <div class="thumb"><a href="/economize-agua-no-cultivo-sustentabilidade/"><img src="/assets/images/horta-domestica-irrigacao-eficiente.webp" alt="Economize Água no Cultivo: Dicas Práticas para Sustentabilidade" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que economizar água no cultivo é muito mais que economia. Economizar água no cultivo não é, definitivamente, só uma questão de conta no fim do mês. Quando você decide economizar água no cultivo, e</div>
@@ -224,7 +234,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   </div>
   <div class="widget">
     <h3>Categorias</h3>
-    <ul class="cat-list"><li><a href="/categoria/casa-jardim/">Casa & Jardim</a> <span class="count">21</span></li><li><a href="/categoria/cuidados-com-plantas/">Cuidados com plantas</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a> <span class="count">4</span></li><li><a href="/categoria/flores-e-arranjos/">Flores e Arranjos</a> <span class="count">1</span></li><li><a href="/categoria/horta-caseira-e-ervas/">Horta caseira e ervas</a> <span class="count">1</span></li><li><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a> <span class="count">6</span></li><li><a href="/categoria/hortas-urbanas/">Hortas urbanas</a> <span class="count">2</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">22</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a> <span class="count">2</span></li><li><a href="/categoria/jardins-urbanos/">Jardins Urbanos</a> <span class="count">1</span></li><li><a href="/categoria/jardins-e-paisagismo/">Jardins e Paisagismo</a> <span class="count">1</span></li><li><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a> <span class="count">6</span></li><li><a href="/categoria/plantas-de-interior/">Plantas de interior</a> <span class="count">8</span></li><li><a href="/categoria/pragas-e-manejo-natural/">Pragas e manejo natural</a> <span class="count">1</span></li><li><a href="/categoria/quartos-e-ambientes-compactos/">Quartos e Ambientes Compactos</a> <span class="count">1</span></li><li><a href="/categoria/saude-e-bem-estar/">Saúde e Bem estar</a> <span class="count">2</span></li><li><a href="/categoria/saude-mental/">Saúde mental</a> <span class="count">1</span></li><li><a href="/categoria/sem-categoria/">Sem categoria</a> <span class="count">5</span></li><li><a href="/categoria/sustentabilidade/">Sustentabilidade</a> <span class="count">6</span></li><li><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a> <span class="count">2</span></li></ul>
+    <ul class="cat-list"><li><a href="/categoria/bem-estar/">Bem-estar</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">6</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">9</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">41</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">12</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">19</span></li></ul>
   </div>
 </aside></div>
 </div></main>
