@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,9 +87,16 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
 
 </head>
 <body>
@@ -96,6 +104,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,38 +114,38 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/cultivar-temperos-em-apartamento-pequeno/">🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha</a></h2>
-  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a cozinha começa a cheirar diferente. Sabe aquele cheiro que “abre” o apetite antes mesmo de a comida ficar pronta? Foi isso que me fisgou. Num fim de noite qualquer, uma folha de manjericão am</div>
   <div class="byline">Marcos Kulenkampff &middot; 29/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/horta-caseira-guia-completo/">Horta Caseira: Guia Completo para Montar a Sua do Zero</a></h2>
-  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que uma horta caseira muda mais do que o seu prato. À primeira vista, montar uma horta caseira parece uma decisão simples: plantar alface, colher temperos e, de quebra, economizar no mercado. No e</div>
   <div class="byline">Marcos Kulenkampff &middot; 28/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/plantar-abobrinhas-em-apartamentos/">Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa</a></h2>
-  <div class="thumb"><a href="/plantar-abobrinhas-em-apartamentos/"><img src="/assets/images/plantar-abobrinhas-em-apartamentos.webp" alt="Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa" loading="lazy"></a></div>
-  <div class="excerpt">Plantar abobrinhas em apartamento funciona — e o sabor compensa. Este guia reúne erros, acertos e técnicas para cultivar em varandas, mesmo com pouco espaço. Da escolha do vaso à polinização manual, descubra como transfo…</div>
+  <div class="thumb"><a href="/plantar-abobrinhas-em-apartamentos/"><img src="/assets/images/plantar-abobrinhas-em-apartamentos.webp" alt="Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Plantar abobrinhas em apartamento funciona — e o sabor compensa. Este guia reúne erros, acertos e técnicas para cultivar em varandas, mesmo com pouco espaço. Da escolha do vaso à polinização manual, d</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivar-ervas-aromaticas-em-casa/">Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar</a></h2>
-  <div class="thumb"><a href="/cultivar-ervas-aromaticas-em-casa/"><img src="/assets/images/horta-caseira-ervas-janela-cozinha.webp" alt="Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-ervas-aromaticas-em-casa/"><img src="/assets/images/horta-caseira-ervas-janela-cozinha.webp" alt="Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">O cheiro que muda a casa. Toda vez que corto um galho de manjericão fresco, a cozinha muda de humor. Não é exagero. Além disso, não é romantização barata de vida slow. Por que esse hábito transformou </div>
   <div class="byline">Marcos Kulenkampff &middot; 23/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivo-temperos-espacos-reduzidos/">Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta</a></h2>
-  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que comecei o cultivo de temperos em espaços reduzidos. Vou começar confessando uma coisa: minha primeira mini-horta morreu em 21 dias. Manjericão esturricado, cebolinha amarela, alecrim triste. T</div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/">O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis</a></h2>
-  <div class="thumb"><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/"><img src="/assets/images/horta-caseira-geral-estacoes-brasil.webp" alt="O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/"><img src="/assets/images/horta-caseira-geral-estacoes-brasil.webp" alt="O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Introdução. Lembro como se fosse ontem: era março de 2019, e eu tinha acabado de plantar uma horta inteira de tomates. Estava animadíssimo, porque tinha visto num vídeo que tomates eram "fáceis de cul</div>
   <div class="byline">Marcos Kulenkampff &middot; 03/02/2026</div>
 </div>
 
@@ -202,5 +211,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

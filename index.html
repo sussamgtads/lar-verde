@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,9 +87,16 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
 
 </head>
 <body>
@@ -96,6 +104,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,62 +114,62 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/hortas-urbanas/">Hortas urbanas</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/como-criar-sua-horta-vertical-e-cultivar-alimentos-em-pouco-espaco/">Como Criar sua Horta Vertical e Cultivar Alimentos em Pouco Espaço</a></h2>
-  <div class="thumb"><a href="/como-criar-sua-horta-vertical-e-cultivar-alimentos-em-pouco-espaco/"><img src="/assets/images/horta-vertical-varanda-apartamento.webp" alt="Como Criar sua Horta Vertical e Cultivar Alimentos em Pouco Espaço" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-criar-sua-horta-vertical-e-cultivar-alimentos-em-pouco-espaco/"><img src="/assets/images/horta-vertical-varanda-apartamento.webp" alt="Como Criar sua Horta Vertical e Cultivar Alimentos em Pouco Espaço" width="1200" height="675" loading="eager" fetchpriority="high"></a></div>
+  <div class="excerpt">Quando descobri que o problema não era falta de espaço. Sabe aquela história de “não tenho espaço pra plantar nada”? Pois é: eu repetia isso quase todo dia, enquanto comprava alface murcha no mercado </div>
   <div class="byline">Marcos Kulenkampff &middot; 31/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/compostagem-domestica-passo-a-passo/">Compostagem doméstica: passo a passo fácil para iniciantes e transforme seus resíduos em adubo</a></h2>
-  <div class="thumb"><a href="/compostagem-domestica-passo-a-passo/"><img src="/assets/images/compostagem-domestica-passo-a-passo.webp" alt="Compostagem doméstica: passo a passo fácil para iniciantes e transforme seus resíduos em adubo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/compostagem-domestica-passo-a-passo/"><img src="/assets/images/compostagem-domestica-passo-a-passo.webp" alt="Compostagem doméstica: passo a passo fácil para iniciantes e transforme seus resíduos em adubo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Compostagem doméstica não entrou na minha vida como um gesto ecológico heroico. Na verdade, começou por irritação. O lixo orgânico da cozinha cheirava mal, atraía insetos e me fazia pensar, toda seman</div>
   <div class="byline">Marcos Kulenkampff &middot; 30/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/cultivar-temperos-em-apartamento-pequeno/">🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha</a></h2>
-  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a cozinha começa a cheirar diferente. Sabe aquele cheiro que “abre” o apetite antes mesmo de a comida ficar pronta? Foi isso que me fisgou. Num fim de noite qualquer, uma folha de manjericão am</div>
   <div class="byline">Marcos Kulenkampff &middot; 29/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/horta-caseira-guia-completo/">Horta Caseira: Guia Completo para Montar a Sua do Zero</a></h2>
-  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que uma horta caseira muda mais do que o seu prato. À primeira vista, montar uma horta caseira parece uma decisão simples: plantar alface, colher temperos e, de quebra, economizar no mercado. No e</div>
   <div class="byline">Marcos Kulenkampff &middot; 28/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/plantas-para-escritorio-home-office/">Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho</a></h2>
-  <div class="thumb"><a href="/plantas-para-escritorio-home-office/"><img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-para-escritorio-home-office/"><img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por Que Comecei a Usar Plantas no Meu Escritório?. Se você trabalha diante de uma tela por horas seguidas, provavelmente já sentiu cansaço mental, olhos pesados e aquela queda brutal de concentração à</div>
   <div class="byline">Marcos Kulenkampff &middot; 26/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a></div>
   <h2><a href="/animais-estimacao-plantas/">Como Cuidar de Animais de Estimação e Plantas em Casa</a></h2>
-  <div class="thumb"><a href="/animais-estimacao-plantas/"><img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="Como Cuidar de Animais de Estimação e Plantas em Casa" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/animais-estimacao-plantas/"><img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="Como Cuidar de Animais de Estimação e Plantas em Casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que Aprender Como Cuidar de Animais de Estimação e Plantas em Casa. Sabe aquele momento mágico em que você se vê cercado por vasos de plantas vibrantes enquanto seu cachorro pula ao seu redor, num</div>
   <div class="byline">Marcos Kulenkampff &middot; 25/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a></div>
   <h2><a href="/plantas-nao-toxicas-para-animais-de-estimacao/">Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas</a></h2>
-  <div class="thumb"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/"><img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/"><img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">A noite que mudou minha forma de escolher plantas não tóxicas para animais de estimação. Eu aprendi sobre plantas não tóxicas para animais de estimação da forma difícil. Não foi lendo um rótulo bonito</div>
   <div class="byline">Marcos Kulenkampff &middot; 24/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/organizar-cuidar-ferramentas-jardim/">Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios</a></h2>
-  <div class="thumb"><a href="/organizar-cuidar-ferramentas-jardim/"><img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios" loading="lazy"></a></div>
-  <div class="excerpt">Ferramentas de jardim duram anos quando bem cuidadas — e o segredo está nos hábitos simples. Este guia mostra como limpeza após uso, armazenamento correto e manutenção básica reduzem gastos e prolongam a vida útil dos se…</div>
+  <div class="thumb"><a href="/organizar-cuidar-ferramentas-jardim/"><img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Ferramentas de jardim duram anos quando bem cuidadas — e o segredo está nos hábitos simples. Este guia mostra como limpeza após uso, armazenamento correto e manutenção básica reduzem gastos e prolonga</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/plantar-abobrinhas-em-apartamentos/">Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa</a></h2>
-  <div class="thumb"><a href="/plantar-abobrinhas-em-apartamentos/"><img src="/assets/images/plantar-abobrinhas-em-apartamentos.webp" alt="Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa" loading="lazy"></a></div>
-  <div class="excerpt">Plantar abobrinhas em apartamento funciona — e o sabor compensa. Este guia reúne erros, acertos e técnicas para cultivar em varandas, mesmo com pouco espaço. Da escolha do vaso à polinização manual, descubra como transfo…</div>
+  <div class="thumb"><a href="/plantar-abobrinhas-em-apartamentos/"><img src="/assets/images/plantar-abobrinhas-em-apartamentos.webp" alt="Plantar abobrinhas em apartamentos: guia completo para colher hortaliças frescas em casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Plantar abobrinhas em apartamento funciona — e o sabor compensa. Este guia reúne erros, acertos e técnicas para cultivar em varandas, mesmo com pouco espaço. Da escolha do vaso à polinização manual, d</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/sem-categoria/">Sem categoria</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/">Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável</a></h2>
-  <div class="thumb"><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/"><img src="/assets/images/cozinha-raiz-sem-plastico.webp" alt="Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/"><img src="/assets/images/cozinha-raiz-sem-plastico.webp" alt="Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Sabe aquele momento em que você abre a gaveta da cozinha e se depara com um mar de sacolinhas plásticas guardadas "pra reutilizar"? Pois é, eu vivia assim até 2019, quando percebi que estava guardando</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/03/2026</div>
 </div>
 <div class="pagination"><span class="current">1</span><a href="/page/2/">2</a><a href="/page/3/">3</a><a href="/page/4/">4</a><a href="/page/5/">5</a></div>
@@ -226,5 +235,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

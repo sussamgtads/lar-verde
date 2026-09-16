@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,9 +87,16 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
 
 </head>
 <body>
@@ -96,6 +104,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,38 +114,38 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/cultivo-orquideas-em-casa-mitos-verdades/">Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais</a></h2>
-  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando uma orquídea de supermercado mudou tudo. Cultivar orquídeas em casa parece, à primeira vista, um ritual reservado a monges budistas ou a colecionadores com estufas climatizadas. Eu também achav</div>
   <div class="byline">Marcos Kulenkampff &middot; 18/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/plantas-resistentes-ao-sol-jardim/">Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo</a></h2>
-  <div class="thumb"><a href="/plantas-resistentes-ao-sol-jardim/"><img src="/assets/images/jardim-resistente-ao-sol-pleno.webp" alt="Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-resistentes-ao-sol-jardim/"><img src="/assets/images/jardim-resistente-ao-sol-pleno.webp" alt="Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o sol se torna desafio. Plantar sob sol pleno é, ao mesmo tempo, um privilégio e um desafio. Privilégio porque luz é vida. Desafio, entretanto, porque o sol brasileiro não perdoa. Já perdi muda</div>
   <div class="byline">Marcos Kulenkampff &middot; 13/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/flores-para-cultivar-em-apartamento/">Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados</a></h2>
-  <div class="thumb"><a href="/flores-para-cultivar-em-apartamento/"><img src="/assets/images/flores-em-apartamento-luz-natural.webp" alt="Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/flores-para-cultivar-em-apartamento/"><img src="/assets/images/flores-em-apartamento-luz-natural.webp" alt="Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que eu comecei a cultivar flores em apartamento. Vou ser sincera com você: durante anos, achei que flores eram coisa de casa com quintal. Morando em apartamento desde os 22 anos, eu me conformei c</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/suculentas-raras/">Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva</a></h2>
-  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando descobri o universo das suculentas raras. A primeira vez que ouvi o termo suculentas raras , confesso: achei exagero de vendedor de feira. Planta é planta, pensei. Algumas mais bonitas, outras </div>
   <div class="byline">Marcos Kulenkampff &middot; 03/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/cactos-ornamentais/">Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo</a></h2>
-  <div class="thumb"><a href="/cactos-ornamentais/"><img src="/assets/images/cactos-ornamentais-decoracao-sala-moderna.webp" alt="Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cactos-ornamentais/"><img src="/assets/images/cactos-ornamentais-decoracao-sala-moderna.webp" alt="Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o espinho vira poesia. Confesso: durante muito tempo eu subestimei os cactos ornamentais. Por isso, achava que eram plantas "duras demais", sem delicadeza. No entanto, tudo mudou no dia em que </div>
   <div class="byline">Marcos Kulenkampff &middot; 02/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/plantas-faceis-para-iniciantes/">Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem</a></h2>
-  <div class="thumb"><a href="/plantas-faceis-para-iniciantes/"><img src="/assets/images/plantas-faceis-para-iniciantes-apartamento.webp" alt="Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-faceis-para-iniciantes/"><img src="/assets/images/plantas-faceis-para-iniciantes-apartamento.webp" alt="Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por alguém que também matou plantas no começo (e aprendeu na prática) . A Verdade Que Ninguém Te Conta Sobre Jardinagem. Todo Mundo Começa Matando Uma Planta (Eu Também). Se você chegou até aqui, prov</div>
   <div class="byline">Marcos Kulenkampff &middot; 01/01/2026</div>
 </div>
 
@@ -202,5 +211,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

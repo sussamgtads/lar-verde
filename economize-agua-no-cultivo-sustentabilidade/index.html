@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,26 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Economize Água no Cultivo: Dicas Práticas para Sustentabilidade", "description": "Economize água no cultivo com técnicas simples, dados reais e experiências práticas para um jardim mais sustentável.", "image": "https://larverde.com.br/assets/images/horta-domestica-irrigacao-eficiente.webp", "datePublished": "2026-01-05", "mainEntityOfPage": "https://larverde.com.br/economize-agua-no-cultivo-sustentabilidade/", "author": {"@type": "Person", "name": "Marcos Kulenkampff"}, "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}
+</script>
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,8 +116,8 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <article class="post">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h1>Economize Água no Cultivo: Dicas Práticas para Sustentabilidade</h1>
-  <div class="byline">Marcos Kulenkampff &middot; Publicado em 05/01/2026</div>
-  <div class="cover"><img src="/assets/images/horta-domestica-irrigacao-eficiente.webp" alt="Economize Água no Cultivo: Dicas Práticas para Sustentabilidade"></div>
+  <div class="byline">Marcos Kulenkampff &middot; Publicado em <time datetime="2026-01-05">05/01/2026</time></div>
+  <div class="cover"><img src="/assets/images/horta-domestica-irrigacao-eficiente.webp" alt="Economize Água no Cultivo: Dicas Práticas para Sustentabilidade" width="1200" height="675"></div>
   <div class="content"><h2 class="wp-block-heading">Por que economizar água no cultivo é muito mais que economia</h2>
 
 
@@ -764,5 +775,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,24 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<meta name="robots" content="noindex,follow">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,62 +114,62 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a></div>
   <h2><a href="/animais-estimacao-plantas/">Como Cuidar de Animais de Estimação e Plantas em Casa</a></h2>
-  <div class="thumb"><a href="/animais-estimacao-plantas/"><img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="Como Cuidar de Animais de Estimação e Plantas em Casa" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/animais-estimacao-plantas/"><img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="Como Cuidar de Animais de Estimação e Plantas em Casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que Aprender Como Cuidar de Animais de Estimação e Plantas em Casa. Sabe aquele momento mágico em que você se vê cercado por vasos de plantas vibrantes enquanto seu cachorro pula ao seu redor, num</div>
   <div class="byline">Marcos Kulenkampff &middot; 25/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-segura-pet-friendly/">Jardinagem segura & Pet-friendly</a></div>
   <h2><a href="/plantas-nao-toxicas-para-animais-de-estimacao/">Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas</a></h2>
-  <div class="thumb"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/"><img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/"><img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">A noite que mudou minha forma de escolher plantas não tóxicas para animais de estimação. Eu aprendi sobre plantas não tóxicas para animais de estimação da forma difícil. Não foi lendo um rótulo bonito</div>
   <div class="byline">Marcos Kulenkampff &middot; 24/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivar-ervas-aromaticas-em-casa/">Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar</a></h2>
-  <div class="thumb"><a href="/cultivar-ervas-aromaticas-em-casa/"><img src="/assets/images/horta-caseira-ervas-janela-cozinha.webp" alt="Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-ervas-aromaticas-em-casa/"><img src="/assets/images/horta-caseira-ervas-janela-cozinha.webp" alt="Cultivar Ervas Aromáticas em Casa: Guia Prático para Começar" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">O cheiro que muda a casa. Toda vez que corto um galho de manjericão fresco, a cozinha muda de humor. Não é exagero. Além disso, não é romantização barata de vida slow. Por que esse hábito transformou </div>
   <div class="byline">Marcos Kulenkampff &middot; 23/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/flores-e-arranjos/">Flores e Arranjos</a></div>
   <h2><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/">Arranjos de Flores Simples e Bonitos: Como Montar em Casa</a></h2>
-  <div class="thumb"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/"><img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="Arranjos de Flores Simples e Bonitos: Como Montar em Casa" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/"><img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="Arranjos de Flores Simples e Bonitos: Como Montar em Casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Flores não precisam impressionar, precisam tocar. Vou começar com uma confissão: durante anos, eu achei que não levava jeito nenhum para montar arranjos florais. Sempre que tentava, parecia… forçado. </div>
   <div class="byline">Marcos Kulenkampff &middot; 22/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/decoracao-sustentavel-casa-criatividade-consciencia/">Decoração Sustentável: Como Transformar Sua Casa com Criatividade e Consciência</a></h2>
-  <div class="thumb"><a href="/decoracao-sustentavel-casa-criatividade-consciencia/"><img src="/assets/images/sala-estar-decoracao-sustentavel-plantas.webp" alt="Decoração Sustentável: Como Transformar Sua Casa com Criatividade e Consciência" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/decoracao-sustentavel-casa-criatividade-consciencia/"><img src="/assets/images/sala-estar-decoracao-sustentavel-plantas.webp" alt="Decoração Sustentável: Como Transformar Sua Casa com Criatividade e Consciência" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a casa começa a mudar, a gente muda junto. Sabe aquele momento em que você entra em casa, fecha a porta e sente… nada? Nem aconchego, nem identidade, nem história. Eu já senti isso. Foi exatame</div>
   <div class="byline">Marcos Kulenkampff &middot; 21/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/cultivo-orquideas-em-casa-mitos-verdades/">Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais</a></h2>
-  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando uma orquídea de supermercado mudou tudo. Cultivar orquídeas em casa parece, à primeira vista, um ritual reservado a monges budistas ou a colecionadores com estufas climatizadas. Eu também achav</div>
   <div class="byline">Marcos Kulenkampff &middot; 18/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/pragas-e-manejo-natural/">Pragas e manejo natural</a></div>
   <h2><a href="/identificar-evitar-pragas-plantas-natural/">Como Identificar e Evitar Pragas em Plantas de Forma Natural</a></h2>
-  <div class="thumb"><a href="/identificar-evitar-pragas-plantas-natural/"><img src="/assets/images/pragas-em-plantas-folha-jardim-caseiro.png" alt="Como Identificar e Evitar Pragas em Plantas de Forma Natural" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/identificar-evitar-pragas-plantas-natural/"><img src="/assets/images/pragas-em-plantas-folha-jardim-caseiro.png" alt="Como Identificar e Evitar Pragas em Plantas de Forma Natural" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando toda folha furada parecia fracasso. Teve uma época em que eu achava que toda folha furada era sinal de fracasso. Sério. Bastava aparecer uma manchinha amarela ou um pontinho preto que eu já cor</div>
   <div class="byline">Marcos Kulenkampff &middot; 17/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/cuidados-com-plantas/">Cuidados com plantas</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/limpeza-correta-das-folhas/">Limpeza correta das folhas: descubra o que fazer agora</a></h2>
-  <div class="thumb"><a href="/limpeza-correta-das-folhas/"><img src="/assets/images/limpeza-folhas-plantas-casa.webp" alt="Limpeza correta das folhas: descubra o que fazer agora" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/limpeza-correta-das-folhas/"><img src="/assets/images/limpeza-folhas-plantas-casa.webp" alt="Limpeza correta das folhas: descubra o que fazer agora" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a poeira revelou o problema invisível. A primeira vez que limpei corretamente as folhas de uma planta não foi por estética. Foi por desespero. A jiboia da sala — linda, pendente, cheia de histó</div>
   <div class="byline">Marcos Kulenkampff &middot; 16/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardins-e-paisagismo/">Jardins e Paisagismo</a></div>
   <h2><a href="/iluminacao-ideal-para-jardins/">Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo</a></h2>
-  <div class="thumb"><a href="/iluminacao-ideal-para-jardins/"><img src="/assets/images/iluminacao-jardim-noturna-residencial.webp" alt="Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/iluminacao-ideal-para-jardins/"><img src="/assets/images/iluminacao-jardim-noturna-residencial.webp" alt="Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o jardim acorda à noite. Tem uma coisa que só quem vive jardim entende: quando o sol se põe, o jardim não dorme. Ele muda. Sons ficam mais nítidos, cheiros aparecem, folhas ganham relevo. Porta</div>
   <div class="byline">Marcos Kulenkampff &middot; 15/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a></div>
   <h2><a href="/decoracao-mesa-elementos-naturais/">Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo</a></h2>
-  <div class="thumb"><a href="/decoracao-mesa-elementos-naturais/"><img src="/assets/images/decoracao-mesa-elementos-naturais-madeira-linho.webp" alt="Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/decoracao-mesa-elementos-naturais/"><img src="/assets/images/decoracao-mesa-elementos-naturais-madeira-linho.webp" alt="Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a mesa vira paisagem. Tem dias em que a gente olha para a mesa da sala de jantar e sente que falta vida. Falta textura, história, cheiro de mato depois da chuva. Ou seja, falta aquela conexão q</div>
   <div class="byline">Marcos Kulenkampff &middot; 14/01/2026</div>
 </div>
 <div class="pagination"><span class="current">1</span><a href="/arquivo/2026-01/page/2/">2</a><a href="/arquivo/2026-01/page/3/">3</a><a href="/arquivo/2026-01/page/4/">4</a></div>
@@ -226,5 +235,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

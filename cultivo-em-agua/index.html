@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,26 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade", "description": "Descubra como o cultivo em água transforma sua casa: menos sujeira, mais beleza e uma forma sustentável de cultivar plantas.", "image": "https://larverde.com.br/assets/images/plantas-cultivo-em-agua-janela.webp", "datePublished": "2026-01-12", "mainEntityOfPage": "https://larverde.com.br/cultivo-em-agua/", "author": {"@type": "Person", "name": "Marcos Kulenkampff"}, "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}
+</script>
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,8 +116,8 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <article class="post">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h1>Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade</h1>
-  <div class="byline">Marcos Kulenkampff &middot; Publicado em 12/01/2026</div>
-  <div class="cover"><img src="/assets/images/plantas-cultivo-em-agua-janela.webp" alt="Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade"></div>
+  <div class="byline">Marcos Kulenkampff &middot; Publicado em <time datetime="2026-01-12">12/01/2026</time></div>
+  <div class="cover"><img src="/assets/images/plantas-cultivo-em-agua-janela.webp" alt="Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade" width="1200" height="675"></div>
   <div class="content"><h2 class="wp-block-heading">Quando a terra saiu da equação</h2>
 
 
@@ -822,5 +833,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

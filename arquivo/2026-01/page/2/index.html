@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,24 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<meta name="robots" content="noindex,follow">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,62 +114,62 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/plantas-que-se-adaptam-a-sombra/">Plantas que se Adaptam à Sombra: Guia Completo para Ambientes com Pouca Luz</a></h2>
-  <div class="thumb"><a href="/plantas-que-se-adaptam-a-sombra/"><img src="/assets/images/plantas-de-sombra-sala-apartamento.png" alt="Plantas que se Adaptam à Sombra: Guia Completo para Ambientes com Pouca Luz" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-que-se-adaptam-a-sombra/"><img src="/assets/images/plantas-de-sombra-sala-apartamento.png" alt="Plantas que se Adaptam à Sombra: Guia Completo para Ambientes com Pouca Luz" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a sombra deixou de ser vilã. Durante muito tempo, eu também acreditei naquele mantra repetido em toda floricultura: "planta precisa de sol". Portanto, me sentia frustrado vivendo em espaços esc</div>
   <div class="byline">Marcos Kulenkampff &middot; 14/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/plantas-resistentes-ao-sol-jardim/">Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo</a></h2>
-  <div class="thumb"><a href="/plantas-resistentes-ao-sol-jardim/"><img src="/assets/images/jardim-resistente-ao-sol-pleno.webp" alt="Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-resistentes-ao-sol-jardim/"><img src="/assets/images/jardim-resistente-ao-sol-pleno.webp" alt="Plantas resistentes ao sol: 5 espécies que deixam seu jardim lindo o ano todo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o sol se torna desafio. Plantar sob sol pleno é, ao mesmo tempo, um privilégio e um desafio. Privilégio porque luz é vida. Desafio, entretanto, porque o sol brasileiro não perdoa. Já perdi muda</div>
   <div class="byline">Marcos Kulenkampff &middot; 13/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/aromatizacao-natural-para-a-casa/">Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis</a></h2>
-  <div class="thumb"><a href="/aromatizacao-natural-para-a-casa/"><img src="/assets/images/aromatizacao-natural-casa-plantas.webp" alt="Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/aromatizacao-natural-para-a-casa/"><img src="/assets/images/aromatizacao-natural-casa-plantas.webp" alt="Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o cheiro da casa conta sua história. Toda casa tem um cheiro. Mesmo que a gente não perceba mais. E não, não estou falando daquele perfume artificial "lavanda do campo" que gruda na garganta e </div>
   <div class="byline">Marcos Kulenkampff &middot; 13/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/cultivo-em-agua/">Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade</a></h2>
-  <div class="thumb"><a href="/cultivo-em-agua/"><img src="/assets/images/plantas-cultivo-em-agua-janela.webp" alt="Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-em-agua/"><img src="/assets/images/plantas-cultivo-em-agua-janela.webp" alt="Cultivo em água: a tendência que une praticidade, beleza e sustentabilidade" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a terra saiu da equação. Vou confessar uma coisa: durante anos, eu desconfiei do cultivo em água. Achava bonito no Pinterest, mas meio artificial. Planta sem terra? Na minha cabeça de botânico-</div>
   <div class="byline">Marcos Kulenkampff &middot; 12/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/hortas-urbanas/">Hortas urbanas</a></div>
   <h2><a href="/jardinagem-na-cozinha/">Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina</a></h2>
-  <div class="thumb"><a href="/jardinagem-na-cozinha/"><img src="/assets/images/horta-temperos-cozinha-janela.webp" alt="Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/jardinagem-na-cozinha/"><img src="/assets/images/horta-temperos-cozinha-janela.webp" alt="Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a cozinha deixa de ser só cozinha. Jardinagem na cozinha não começou como um projeto bonito por aqui. Na verdade, começou por necessidade. Um domingo qualquer, molho de tomate quase pronto, e… </div>
   <div class="byline">Marcos Kulenkampff &middot; 12/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/presentes-criativos-usando-plantas/">Presentes criativos usando plantas: ideias originais e sustentáveis para encantar</a></h2>
-  <div class="thumb"><a href="/presentes-criativos-usando-plantas/"><img src="/assets/images/presentes-criativos-com-plantas-casa.webp" alt="Presentes criativos usando plantas: ideias originais e sustentáveis para encantar" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/presentes-criativos-usando-plantas/"><img src="/assets/images/presentes-criativos-com-plantas-casa.webp" alt="Presentes criativos usando plantas: ideias originais e sustentáveis para encantar" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o presente cresce junto com a memória. Vou confessar uma coisa: eu já cansei de ganhar presente que vira pó em três dias. Chocolate acaba. Perfume evapora. Por outro lado, objetos encostam na e</div>
   <div class="byline">Marcos Kulenkampff &middot; 11/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/cultivar-plantas-na-agua-em-casa/">Cultive plantas na água: a técnica prática e segura para transformar sua casa</a></h2>
-  <div class="thumb"><a href="/cultivar-plantas-na-agua-em-casa/"><img src="/assets/images/plantas-cultivadas-na-agua-em-vidro.webp" alt="Cultive plantas na água: a técnica prática e segura para transformar sua casa" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-plantas-na-agua-em-casa/"><img src="/assets/images/plantas-cultivadas-na-agua-em-vidro.webp" alt="Cultive plantas na água: a técnica prática e segura para transformar sua casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a terra saiu da equação (e tudo mudou). A primeira vez que eu comecei a cultivar plantas na água foi por pura teimosia. Tinha acabado de me mudar para um apartamento pequeno, sem varanda, com u</div>
   <div class="byline">Marcos Kulenkampff &middot; 11/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/reaproveitamento-criativo-no-jardim/">Reaproveitamento Criativo no Jardim: Ideias Sustentáveis e Inspiradoras</a></h2>
-  <div class="thumb"><a href="/reaproveitamento-criativo-no-jardim/"><img src="/assets/images/jardim-com-vasos-reaproveitados.webp" alt="Reaproveitamento Criativo no Jardim: Ideias Sustentáveis e Inspiradoras" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/reaproveitamento-criativo-no-jardim/"><img src="/assets/images/jardim-com-vasos-reaproveitados.webp" alt="Reaproveitamento Criativo no Jardim: Ideias Sustentáveis e Inspiradoras" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Introdução: quando o lixo começou a ensinar botânica. A origem nada romântica do meu primeiro jardim reaproveitado. Eu não comecei a reaproveitar por consciência ambiental. Na verdade, comecei por fal</div>
   <div class="byline">Marcos Kulenkampff &middot; 10/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/cuidados-com-plantas/">Cuidados com plantas</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/proteger-plantas-mudancas-temperatura/">Como proteger plantas das mudanças de temperatura: 9 dicas eficazes e naturais</a></h2>
-  <div class="thumb"><a href="/proteger-plantas-mudancas-temperatura/"><img src="/assets/images/protecao-plantas-mudancas-temperatura-jardim.webp" alt="Como proteger plantas das mudanças de temperatura: 9 dicas eficazes e naturais" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/proteger-plantas-mudancas-temperatura/"><img src="/assets/images/protecao-plantas-mudancas-temperatura-jardim.webp" alt="Como proteger plantas das mudanças de temperatura: 9 dicas eficazes e naturais" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o clima enlouquece, quem sofre primeiro são elas. Outro dia acordei cedo, café na mão, fui ver minhas plantas… e lá estava o estrago. Folhas queimadas numa dracena que até ontem parecia feliz, </div>
   <div class="byline">Marcos Kulenkampff &middot; 10/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-caseira-e-ervas/">Horta caseira e ervas</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/jardim-de-ervas-em-casa-guia-completo/">Como Criar um Jardim de Ervas em Casa: Guia Completo</a></h2>
-  <div class="thumb"><a href="/jardim-de-ervas-em-casa-guia-completo/"><img src="/assets/images/jardim-de-ervas-em-casa-vasos.webp" alt="Como Criar um Jardim de Ervas em Casa: Guia Completo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/jardim-de-ervas-em-casa-guia-completo/"><img src="/assets/images/jardim-de-ervas-em-casa-vasos.webp" alt="Como Criar um Jardim de Ervas em Casa: Guia Completo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Introdução: terra nas unhas e cheiro de manjericão no ar. Criar um jardim de ervas em casa parece simples — até você perceber que o alecrim morreu afogado e a hortelã dominou tudo como se fosse dona d</div>
   <div class="byline">Marcos Kulenkampff &middot; 09/01/2026</div>
 </div>
 <div class="pagination"><a href="/arquivo/2026-01/">1</a><span class="current">2</span><a href="/arquivo/2026-01/page/3/">3</a><a href="/arquivo/2026-01/page/4/">4</a></div>
@@ -226,5 +235,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

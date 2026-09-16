@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,9 +87,16 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
 
 </head>
 <body>
@@ -96,6 +104,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,62 +114,62 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/hortas-urbanas/">Hortas urbanas</a></div>
   <h2><a href="/jardinagem-na-cozinha/">Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina</a></h2>
-  <div class="thumb"><a href="/jardinagem-na-cozinha/"><img src="/assets/images/horta-temperos-cozinha-janela.webp" alt="Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/jardinagem-na-cozinha/"><img src="/assets/images/horta-temperos-cozinha-janela.webp" alt="Jardinagem na cozinha: como cultivar temperos frescos em casa e transformar sua rotina" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a cozinha deixa de ser só cozinha. Jardinagem na cozinha não começou como um projeto bonito por aqui. Na verdade, começou por necessidade. Um domingo qualquer, molho de tomate quase pronto, e… </div>
   <div class="byline">Marcos Kulenkampff &middot; 12/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a></div>
   <h2><a href="/presentes-criativos-usando-plantas/">Presentes criativos usando plantas: ideias originais e sustentáveis para encantar</a></h2>
-  <div class="thumb"><a href="/presentes-criativos-usando-plantas/"><img src="/assets/images/presentes-criativos-com-plantas-casa.webp" alt="Presentes criativos usando plantas: ideias originais e sustentáveis para encantar" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/presentes-criativos-usando-plantas/"><img src="/assets/images/presentes-criativos-com-plantas-casa.webp" alt="Presentes criativos usando plantas: ideias originais e sustentáveis para encantar" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o presente cresce junto com a memória. Vou confessar uma coisa: eu já cansei de ganhar presente que vira pó em três dias. Chocolate acaba. Perfume evapora. Por outro lado, objetos encostam na e</div>
   <div class="byline">Marcos Kulenkampff &middot; 11/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/cuidados-essenciais-plantas-de-interior/">Cuidados Essenciais para Plantas de Interior: Guia Completo</a></h2>
-  <div class="thumb"><a href="/cuidados-essenciais-plantas-de-interior/"><img src="/assets/images/plantas-de-interior-sala-luz-natural.webp" alt="Cuidados Essenciais para Plantas de Interior: Guia Completo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cuidados-essenciais-plantas-de-interior/"><img src="/assets/images/plantas-de-interior-sala-luz-natural.webp" alt="Cuidados Essenciais para Plantas de Interior: Guia Completo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Plantas não são decoração, são presença viva. A primeira coisa que aprendi — e demorei anos para aceitar — é que plantas de interior não querem "sobreviver" na sua casa. Na verdade, elas querem viver </div>
   <div class="byline">Marcos Kulenkampff &middot; 08/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/plantas-que-purificam-o-ar/">Plantas que Purificam o Ar: Guia Completo para um Lar Mais Saudável</a></h2>
-  <div class="thumb"><a href="/plantas-que-purificam-o-ar/"><img src="/assets/images/sala-estar-plantas-purificam-ar.webp" alt="Plantas que Purificam o Ar: Guia Completo para um Lar Mais Saudável" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-que-purificam-o-ar/"><img src="/assets/images/sala-estar-plantas-purificam-ar.webp" alt="Plantas que Purificam o Ar: Guia Completo para um Lar Mais Saudável" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">A descoberta que mudou minha relação com o ar de casa. A primeira vez que me dei conta de que o ar dentro de casa podia ser pior do que o da rua foi numa madrugada qualquer, janela fechada, cheiro est</div>
   <div class="byline">Marcos Kulenkampff &middot; 08/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/como-montar-comedouro-de-passaros-caseiro/">Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza</a></h2>
-  <div class="thumb"><a href="/como-montar-comedouro-de-passaros-caseiro/"><img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-montar-comedouro-de-passaros-caseiro/"><img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Como Fazer um Comedouro de Pássaros Caseiro Que Realmente Funciona (Aprendi na Marra) Sabe aquela manhã de domingo em que você toma café olhando pela janela e pensa "seria tão legal ver mais pássaros </div>
   <div class="byline">Marcos Kulenkampff &middot; 07/03/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a><a href="/categoria/varandas-e-areas-externas/">Varandas e Áreas Externas</a></div>
   <h2><a href="/decorar-varandas-pequenas/">Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço</a></h2>
-  <div class="thumb"><a href="/decorar-varandas-pequenas/"><img src="/assets/images/varanda-pequena-decorada-plantas-apartamento.webp" alt="Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/decorar-varandas-pequenas/"><img src="/assets/images/varanda-pequena-decorada-plantas-apartamento.webp" alt="Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que resolvi escrever sobre decorar varandas pequenas. Vou ser completamente transparente com você: durante anos eu literalmente ignorei minha varanda. Era pequena demais, estreita demais, "não val</div>
   <div class="byline">Marcos Kulenkampff &middot; 07/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/terrarios-passo-a-passo-montar-cuidar/">Terrários: passo a passo para montar e cuidar com sucesso</a></h2>
-  <div class="thumb"><a href="/terrarios-passo-a-passo-montar-cuidar/"><img src="/assets/images/terrario-fechado-mesa-madeira.webp" alt="Terrários: passo a passo para montar e cuidar com sucesso" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/terrarios-passo-a-passo-montar-cuidar/"><img src="/assets/images/terrario-fechado-mesa-madeira.webp" alt="Terrários: passo a passo para montar e cuidar com sucesso" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que comecei a montar terrários (e por que você deveria tentar). Olha só… poucas coisas me ensinaram tanto sobre equilíbrio quanto os terrários. Talvez porque eles não perdoem exageros. Água demais</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a></div>
   <h2><a href="/como-ampliar-ambientes-pequenos/">Como Ampliar Ambientes Pequenos: 5 Truques Infalíveis</a></h2>
-  <div class="thumb"><a href="/como-ampliar-ambientes-pequenos/"><img src="/assets/images/ambiente-pequeno-luz-natural.webp" alt="Como Ampliar Ambientes Pequenos: 5 Truques Infalíveis" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-ampliar-ambientes-pequenos/"><img src="/assets/images/ambiente-pequeno-luz-natural.webp" alt="Como Ampliar Ambientes Pequenos: 5 Truques Infalíveis" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que alguns ambientes parecem menores do que realmente são?. Tem dias em que a casa parece menor do que realmente é. Já sentiu isso?. Não é só impressão. Na verdade, ambientes pequenos encolhem qua</div>
   <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivo-temperos-espacos-reduzidos/">Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta</a></h2>
-  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que comecei o cultivo de temperos em espaços reduzidos. Vou começar confessando uma coisa: minha primeira mini-horta morreu em 21 dias. Manjericão esturricado, cebolinha amarela, alecrim triste. T</div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/cantinho-verde-dentro-de-casa/">Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)</a></h2>
-  <div class="thumb"><a href="/cantinho-verde-dentro-de-casa/"><img src="/assets/images/cantinho-verde-dentro-de-casa-apartamento.webp" alt="Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cantinho-verde-dentro-de-casa/"><img src="/assets/images/cantinho-verde-dentro-de-casa-apartamento.webp" alt="Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">O dia em que percebi que minha casa precisava de um cantinho verde. Lembro exatamente do momento. Era, aliás, fim de tarde, computador ligado, café frio ao lado, e aquela sensação estranha de cansaço </div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div>
 <div class="pagination"><a href="/categoria/casa-jardim/">1</a><span class="current">2</span><a href="/categoria/casa-jardim/page/3/">3</a></div>
@@ -226,5 +235,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

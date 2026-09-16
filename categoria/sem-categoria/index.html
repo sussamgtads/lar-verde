@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,24 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<meta name="robots" content="noindex,follow">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,32 +114,32 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/sem-categoria/">Sem categoria</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/">Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável</a></h2>
-  <div class="thumb"><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/"><img src="/assets/images/cozinha-raiz-sem-plastico.webp" alt="Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-reduzir-plastico-no-dia-a-dia-vidasustentavel/"><img src="/assets/images/cozinha-raiz-sem-plastico.webp" alt="Como reduzir o plástico no dia a dia: atitudes práticas para uma vida mais sustentável" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Sabe aquele momento em que você abre a gaveta da cozinha e se depara com um mar de sacolinhas plásticas guardadas "pra reutilizar"? Pois é, eu vivia assim até 2019, quando percebi que estava guardando</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/03/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sem-categoria/">Sem categoria</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/ideias-para-deixar-banheiro-verde-sustentavel/">10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo</a></h2>
-  <div class="thumb"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/"><img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/"><img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Como Transformar Seu Banheiro em um Espaço Sustentável (Sem Gastar uma Fortuna). Sabe aquele momento em que você abre a conta de água e sente o coração apertar? Pois é, eu também já passei por isso. E</div>
   <div class="byline">Marcos Kulenkampff &middot; 16/03/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/como-montar-comedouro-de-passaros-caseiro/">Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza</a></h2>
-  <div class="thumb"><a href="/como-montar-comedouro-de-passaros-caseiro/"><img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-montar-comedouro-de-passaros-caseiro/"><img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Como Fazer um Comedouro de Pássaros Caseiro Que Realmente Funciona (Aprendi na Marra) Sabe aquela manhã de domingo em que você toma café olhando pela janela e pensa "seria tão legal ver mais pássaros </div>
   <div class="byline">Marcos Kulenkampff &middot; 07/03/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/">O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis</a></h2>
-  <div class="thumb"><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/"><img src="/assets/images/horta-caseira-geral-estacoes-brasil.webp" alt="O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/o-que-plantar-em-cada-epoca-do-ano-horta-caseira/"><img src="/assets/images/horta-caseira-geral-estacoes-brasil.webp" alt="O que Plantar em Cada Época do Ano: Guia Definitivo para Hortas Caseiras Saudáveis" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Introdução. Lembro como se fosse ontem: era março de 2019, e eu tinha acabado de plantar uma horta inteira de tomates. Estava animadíssimo, porque tinha visto num vídeo que tomates eram "fáceis de cul</div>
   <div class="byline">Marcos Kulenkampff &middot; 03/02/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/suculentas-raras/">Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva</a></h2>
-  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando descobri o universo das suculentas raras. A primeira vez que ouvi o termo suculentas raras , confesso: achei exagero de vendedor de feira. Planta é planta, pensei. Algumas mais bonitas, outras </div>
   <div class="byline">Marcos Kulenkampff &middot; 03/01/2026</div>
 </div>
 
@@ -196,5 +205,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

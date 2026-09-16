@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,16 +87,24 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
-
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<meta name="robots" content="noindex,follow">
 </head>
 <body>
 
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,44 +114,44 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/cultivo-temperos-espacos-reduzidos/">Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta</a></h2>
-  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-temperos-espacos-reduzidos/"><img src="/assets/images/mini-horta-temperos.webp" alt="Cultivo de Temperos em Espaços Reduzidos: Como Montar Sua Mini-Horta" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que comecei o cultivo de temperos em espaços reduzidos. Vou começar confessando uma coisa: minha primeira mini-horta morreu em 21 dias. Manjericão esturricado, cebolinha amarela, alecrim triste. T</div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/cantinho-verde-dentro-de-casa/">Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)</a></h2>
-  <div class="thumb"><a href="/cantinho-verde-dentro-de-casa/"><img src="/assets/images/cantinho-verde-dentro-de-casa-apartamento.webp" alt="Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cantinho-verde-dentro-de-casa/"><img src="/assets/images/cantinho-verde-dentro-de-casa-apartamento.webp" alt="Cantinho Verde Dentro de Casa: Como Criar o Seu (Mesmo Sem Espaço ou Tempo)" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">O dia em que percebi que minha casa precisava de um cantinho verde. Lembro exatamente do momento. Era, aliás, fim de tarde, computador ligado, café frio ao lado, e aquela sensação estranha de cansaço </div>
   <div class="byline">Marcos Kulenkampff &middot; 04/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a><a href="/categoria/sem-categoria/">Sem categoria</a></div>
   <h2><a href="/suculentas-raras/">Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva</a></h2>
-  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/suculentas-raras/"><img src="/assets/images/colecao-suculentas-raras-luz-natural.webp" alt="Suculentas Raras: Como Escolher, Cultivar e Montar uma Coleção Exclusiva" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando descobri o universo das suculentas raras. A primeira vez que ouvi o termo suculentas raras , confesso: achei exagero de vendedor de feira. Planta é planta, pensei. Algumas mais bonitas, outras </div>
   <div class="byline">Marcos Kulenkampff &middot; 03/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/vaso-ideal-para-cada-planta/">Como escolher o vaso ideal para cada planta e ter um jardim saudável</a></h2>
-  <div class="thumb"><a href="/vaso-ideal-para-cada-planta/"><img src="/assets/images/vasos-para-plantas-jardim-saudavel.webp" alt="Como escolher o vaso ideal para cada planta e ter um jardim saudável" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/vaso-ideal-para-cada-planta/"><img src="/assets/images/vasos-para-plantas-jardim-saudavel.webp" alt="Como escolher o vaso ideal para cada planta e ter um jardim saudável" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">O dia em que descobri a importância do vaso ideal para plantas. Durante muito tempo, confesso, tratei vaso como acessório. Algo decorativo. Um "porta-planta". Bonito, combina com a sala, pronto. Porém</div>
   <div class="byline">Marcos Kulenkampff &middot; 03/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/como-cuidar-de-suculentas/">Como Cuidar de Suculentas: Guia Completo para Manter suas Plantas Sempre Vivas</a></h2>
-  <div class="thumb"><a href="/como-cuidar-de-suculentas/"><img src="/assets/images/suculentas-saudaveis-vasos-barro-luz-natural.webp" alt="Como Cuidar de Suculentas: Guia Completo para Manter suas Plantas Sempre Vivas" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/como-cuidar-de-suculentas/"><img src="/assets/images/suculentas-saudaveis-vasos-barro-luz-natural.webp" alt="Como Cuidar de Suculentas: Guia Completo para Manter suas Plantas Sempre Vivas" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por alguém que matou suculentas "por amor" (e aprendeu a deixá-las em paz). Introdução: A Verdade Inconveniente Sobre Suculentas. Por Que Tanta Gente "Mata" Suculentas Sem Querer?. Se você já perdeu u</div>
   <div class="byline">Marcos Kulenkampff &middot; 02/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/cactos-ornamentais/">Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo</a></h2>
-  <div class="thumb"><a href="/cactos-ornamentais/"><img src="/assets/images/cactos-ornamentais-decoracao-sala-moderna.webp" alt="Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cactos-ornamentais/"><img src="/assets/images/cactos-ornamentais-decoracao-sala-moderna.webp" alt="Cactos Ornamentais: Guia Completo para Cultivar e Decorar com Estilo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o espinho vira poesia. Confesso: durante muito tempo eu subestimei os cactos ornamentais. Por isso, achava que eram plantas "duras demais", sem delicadeza. No entanto, tudo mudou no dia em que </div>
   <div class="byline">Marcos Kulenkampff &middot; 02/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/plantas-faceis-para-iniciantes/">Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem</a></h2>
-  <div class="thumb"><a href="/plantas-faceis-para-iniciantes/"><img src="/assets/images/plantas-faceis-para-iniciantes-apartamento.webp" alt="Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-faceis-para-iniciantes/"><img src="/assets/images/plantas-faceis-para-iniciantes-apartamento.webp" alt="Plantas Fáceis para Iniciantes: Guia Prático para Começar sua Jardinagem" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por alguém que também matou plantas no começo (e aprendeu na prática) . A Verdade Que Ninguém Te Conta Sobre Jardinagem. Todo Mundo Começa Matando Uma Planta (Eu Também). Se você chegou até aqui, prov</div>
   <div class="byline">Marcos Kulenkampff &middot; 01/01/2026</div>
 </div>
 <div class="pagination"><a href="/arquivo/2026-01/">1</a><a href="/arquivo/2026-01/page/2/">2</a><a href="/arquivo/2026-01/page/3/">3</a><span class="current">4</span></div>
@@ -208,5 +217,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>

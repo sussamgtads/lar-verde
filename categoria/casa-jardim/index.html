@@ -25,6 +25,7 @@ header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
 nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -86,9 +87,16 @@ footer.site a{color:#fff}
 footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 .crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
 .backlink{display:inline-block;margin-top:30px}
-@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%}}
-@media (max-width:640px){nav.cats{display:none}}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
 </style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
 
 </head>
 <body>
@@ -96,6 +104,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <header class="site">
   <div class="wrap">
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></nav>
   </div>
 </header>
@@ -105,62 +114,62 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/cultivar-temperos-em-apartamento-pequeno/">🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha</a></h2>
-  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivar-temperos-em-apartamento-pequeno/"><img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a cozinha começa a cheirar diferente. Sabe aquele cheiro que “abre” o apetite antes mesmo de a comida ficar pronta? Foi isso que me fisgou. Num fim de noite qualquer, uma folha de manjericão am</div>
   <div class="byline">Marcos Kulenkampff &middot; 29/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/horta-e-cultivo-de-alimentos/">Horta e Cultivo de Alimentos</a></div>
   <h2><a href="/horta-caseira-guia-completo/">Horta Caseira: Guia Completo para Montar a Sua do Zero</a></h2>
-  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/horta-caseira-guia-completo/"><img src="/assets/images/horta-caseira-guia-completo.webp" alt="Horta Caseira: Guia Completo para Montar a Sua do Zero" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que uma horta caseira muda mais do que o seu prato. À primeira vista, montar uma horta caseira parece uma decisão simples: plantar alface, colher temperos e, de quebra, economizar no mercado. No e</div>
   <div class="byline">Marcos Kulenkampff &middot; 28/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-de-interior/">Plantas de interior</a></div>
   <h2><a href="/plantas-para-escritorio-home-office/">Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho</a></h2>
-  <div class="thumb"><a href="/plantas-para-escritorio-home-office/"><img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/plantas-para-escritorio-home-office/"><img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por Que Comecei a Usar Plantas no Meu Escritório?. Se você trabalha diante de uma tela por horas seguidas, provavelmente já sentiu cansaço mental, olhos pesados e aquela queda brutal de concentração à</div>
   <div class="byline">Marcos Kulenkampff &middot; 26/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
   <h2><a href="/organizar-cuidar-ferramentas-jardim/">Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios</a></h2>
-  <div class="thumb"><a href="/organizar-cuidar-ferramentas-jardim/"><img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios" loading="lazy"></a></div>
-  <div class="excerpt">Ferramentas de jardim duram anos quando bem cuidadas — e o segredo está nos hábitos simples. Este guia mostra como limpeza após uso, armazenamento correto e manutenção básica reduzem gastos e prolongam a vida útil dos se…</div>
+  <div class="thumb"><a href="/organizar-cuidar-ferramentas-jardim/"><img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Ferramentas de jardim duram anos quando bem cuidadas — e o segredo está nos hábitos simples. Este guia mostra como limpeza após uso, armazenamento correto e manutenção básica reduzem gastos e prolonga</div>
   <div class="byline">Marcos Kulenkampff &middot; 23/12/2025</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/flores-e-arranjos/">Flores e Arranjos</a></div>
   <h2><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/">Arranjos de Flores Simples e Bonitos: Como Montar em Casa</a></h2>
-  <div class="thumb"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/"><img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="Arranjos de Flores Simples e Bonitos: Como Montar em Casa" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/"><img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="Arranjos de Flores Simples e Bonitos: Como Montar em Casa" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Flores não precisam impressionar, precisam tocar. Vou começar com uma confissão: durante anos, eu achei que não levava jeito nenhum para montar arranjos florais. Sempre que tentava, parecia… forçado. </div>
   <div class="byline">Marcos Kulenkampff &middot; 22/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/plantas-ornamentais/">Plantas Ornamentais</a></div>
   <h2><a href="/cultivo-orquideas-em-casa-mitos-verdades/">Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais</a></h2>
-  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/cultivo-orquideas-em-casa-mitos-verdades/"><img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando uma orquídea de supermercado mudou tudo. Cultivar orquídeas em casa parece, à primeira vista, um ritual reservado a monges budistas ou a colecionadores com estufas climatizadas. Eu também achav</div>
   <div class="byline">Marcos Kulenkampff &middot; 18/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sem-categoria/">Sem categoria</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/ideias-para-deixar-banheiro-verde-sustentavel/">10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo</a></h2>
-  <div class="thumb"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/"><img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/"><img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Como Transformar Seu Banheiro em um Espaço Sustentável (Sem Gastar uma Fortuna). Sabe aquele momento em que você abre a conta de água e sente o coração apertar? Pois é, eu também já passei por isso. E</div>
   <div class="byline">Marcos Kulenkampff &middot; 16/03/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/jardins-e-paisagismo/">Jardins e Paisagismo</a></div>
   <h2><a href="/iluminacao-ideal-para-jardins/">Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo</a></h2>
-  <div class="thumb"><a href="/iluminacao-ideal-para-jardins/"><img src="/assets/images/iluminacao-jardim-noturna-residencial.webp" alt="Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/iluminacao-ideal-para-jardins/"><img src="/assets/images/iluminacao-jardim-noturna-residencial.webp" alt="Iluminação Ideal para Jardins: Como Valorizar Cada Espaço Externo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o jardim acorda à noite. Tem uma coisa que só quem vive jardim entende: quando o sol se põe, o jardim não dorme. Ele muda. Sons ficam mais nítidos, cheiros aparecem, folhas ganham relevo. Porta</div>
   <div class="byline">Marcos Kulenkampff &middot; 15/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/decoracao-e-organizacao/">Decoração e Organização</a></div>
   <h2><a href="/decoracao-mesa-elementos-naturais/">Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo</a></h2>
-  <div class="thumb"><a href="/decoracao-mesa-elementos-naturais/"><img src="/assets/images/decoracao-mesa-elementos-naturais-madeira-linho.webp" alt="Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/decoracao-mesa-elementos-naturais/"><img src="/assets/images/decoracao-mesa-elementos-naturais-madeira-linho.webp" alt="Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando a mesa vira paisagem. Tem dias em que a gente olha para a mesa da sala de jantar e sente que falta vida. Falta textura, história, cheiro de mato depois da chuva. Ou seja, falta aquela conexão q</div>
   <div class="byline">Marcos Kulenkampff &middot; 14/01/2026</div>
 </div><div class="postcard">
   <div class="cats"><a href="/categoria/casa-jardim/">Casa & Jardim</a><a href="/categoria/sustentabilidade/">Sustentabilidade</a></div>
   <h2><a href="/aromatizacao-natural-para-a-casa/">Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis</a></h2>
-  <div class="thumb"><a href="/aromatizacao-natural-para-a-casa/"><img src="/assets/images/aromatizacao-natural-casa-plantas.webp" alt="Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis" loading="lazy"></a></div>
-  <div class="excerpt"></div>
+  <div class="thumb"><a href="/aromatizacao-natural-para-a-casa/"><img src="/assets/images/aromatizacao-natural-casa-plantas.webp" alt="Aromatização Natural para a Casa: Transforme Seu Lar com Aromas Saudáveis e Sustentáveis" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Quando o cheiro da casa conta sua história. Toda casa tem um cheiro. Mesmo que a gente não perceba mais. E não, não estou falando daquele perfume artificial "lavanda do campo" que gruda na garganta e </div>
   <div class="byline">Marcos Kulenkampff &middot; 13/01/2026</div>
 </div>
 <div class="pagination"><span class="current">1</span><a href="/categoria/casa-jardim/page/2/">2</a><a href="/categoria/casa-jardim/page/3/">3</a></div>
@@ -226,5 +235,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
 </body>
 </html>
