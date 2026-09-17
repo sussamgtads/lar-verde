@@ -24,8 +24,10 @@ header.site .wrap{display:flex;align-items:center;justify-content:space-between;
 header.site a{color:#fff}
 .brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
 .brand img{width:36px;height:36px;border-radius:8px}
-nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95}
+nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95;flex:1}
 .nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
+.shop-btn{background:#fff;color:var(--green-dark)!important;padding:8px 16px;border-radius:20px;font-size:.85rem;font-weight:700;white-space:nowrap;text-decoration:none!important}
+.shop-btn:hover{background:#eee}
 main{padding:36px 0 60px}
 .hero{padding:0 0 22px}
 .hero h1{font-size:1.7rem;margin:0 0 4px}
@@ -121,6 +123,7 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
     <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
     <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/bem-estar/">Bem-estar</a></nav>
+    <a class="shop-btn" href="/kit-lar-verde/">Loja Lar Verde</a>
   </div>
 </header>
 <main><div class="wrap">
@@ -745,13 +748,6 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 </div>
 <aside class="col-side">
   <div class="widget">
-    <h3>Pesquisar</h3>
-    <form class="search-form" action="/busca/" method="get">
-      <input type="text" name="q" placeholder="Buscar no blog...">
-      <button type="submit">Buscar</button>
-    </form>
-  </div>
-  <div class="widget">
     <h3>Posts recentes</h3>
     
     <div class="recent-item">
@@ -794,6 +790,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="widget">
     <h3>Categorias</h3>
     <ul class="cat-list"><li><a href="/categoria/bem-estar/">Bem-estar</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">6</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">9</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">41</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">12</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">19</span></li></ul>
+  </div>
+  <div class="widget">
+    <h3>Pesquisar</h3>
+    <form class="search-form" action="/busca/" method="get">
+      <input type="text" name="q" placeholder="Buscar no blog...">
+      <button type="submit">Buscar</button>
+    </form>
   </div>
 </aside></div>
 </div></main>
