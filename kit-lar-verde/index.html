@@ -12,26 +12,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Caveat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --sage:#8a9a7e; --olive:#a8ac7e; --terracotta:#c9906f; --terracotta-light:#e3c2ab;
-  --cream:#fbf7f0; --cream-dark:#f3ecdf; --brown:#5b4a3a; --gold:#b99a5b; --text:#4a4237;
+  --sage:#8a9a7e; --olive:#5c6e46; --olive-dark:#485637; --terracotta:#c9906f;
+  --cream:#fbf7f0; --cream-dark:#f2ecdf; --peach:#f3e2d3; --brown:#5b4a3a; --gold:#b99a5b; --text:#4a4237;
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:'Poppins',sans-serif;background:var(--cream);color:var(--text);line-height:1.65;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 h1,h2,h3{font-family:'Playfair Display',serif;margin:0;color:var(--brown);font-weight:700}
 .script{font-family:'Caveat',cursive;font-weight:600;color:var(--terracotta)}
-.wrap{max-width:1160px;margin:0 auto;padding:0 24px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
 .eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);font-weight:600}
-section{padding:70px 0}
-.btn{display:inline-block;background:var(--terracotta);color:#fff;padding:16px 32px;border-radius:30px;
-  font-weight:600;font-size:.95rem;letter-spacing:.03em;text-decoration:none;box-shadow:0 8px 20px rgba(201,144,111,.35);
-  transition:transform .2s, box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(201,144,111,.45)}
-.card{background:#fff;border-radius:22px;box-shadow:0 10px 30px rgba(90,70,50,.08);padding:28px}
+section{padding:64px 0}
+.ic{color:var(--olive);display:inline-flex}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--olive);color:#fff!important;padding:16px 30px;
+  border-radius:30px;font-weight:600;font-size:.92rem;letter-spacing:.02em;text-decoration:none!important;
+  box-shadow:0 10px 24px rgba(92,110,70,.3);transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(92,110,70,.4)}
+.card{background:#fff;border-radius:20px;box-shadow:0 8px 26px rgba(90,70,50,.08);padding:26px}
 .pill{display:inline-flex;align-items:center;gap:6px;background:var(--cream-dark);color:var(--brown);
-  padding:6px 16px;border-radius:20px;font-size:.75rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
+  padding:6px 16px;border-radius:20px;font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600}
 .reveal{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
 .reveal.in{opacity:1;transform:none}
+.section-title{text-align:center;max-width:640px;margin:0 auto 12px}
+.section-title h2{font-size:1.85rem;margin-top:8px}
+.section-sub{text-align:center;color:#8a7f6d;font-size:.9rem;margin-bottom:40px}
 
 /* header */
 header.kit{padding:22px 0;background:var(--cream)}
@@ -40,93 +44,110 @@ header.kit .brand{font-family:'Playfair Display',serif;font-weight:700;font-size
 header.kit .back{font-size:.85rem;color:var(--sage);text-decoration:none}
 
 /* hero */
-.hero .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
-.hero h1{font-size:2.5rem;line-height:1.25;margin-bottom:20px}
-.hero p.lead{font-size:1.08rem;color:#6b6255;margin-bottom:28px}
-.hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
-.hero-stats div{display:flex;gap:10px;align-items:flex-start;font-size:.9rem}
-.hero-stats .ic{color:var(--sage);font-size:1.1rem}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center}
+.hero h1{font-size:2.4rem;line-height:1.28;margin-bottom:18px}
+.hero p.lead{font-size:1.05rem;color:#6b6255;margin-bottom:26px}
+.hero-stats{display:flex;gap:26px;margin-top:32px;flex-wrap:wrap}
+.hero-stats div{display:flex;flex-direction:column;gap:8px;font-size:.82rem;max-width:110px}
 .hero-img{position:relative}
-.hero-img img{border-radius:24px;box-shadow:0 20px 50px rgba(90,70,50,.18)}
-.hero-mockups{display:flex;gap:12px;margin-top:18px}
-.hero-mockups img{border-radius:12px;box-shadow:0 8px 20px rgba(90,70,50,.15);width:31%}
+.hero-img>img{border-radius:24px;box-shadow:0 20px 50px rgba(90,70,50,.18)}
+.hero-mockups{display:flex;gap:10px;margin-top:16px}
+.hero-mockups img{border-radius:12px;box-shadow:0 8px 20px rgba(90,70,50,.15);width:32%;transform:rotate(-2deg)}
+.hero-mockups img:nth-child(2){transform:rotate(1.5deg)}
+.hero-mockups img:nth-child(3){transform:rotate(-1deg)}
 
 /* seção 2 */
 .mao-boa{background:var(--cream-dark)}
 .mao-boa .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.mao-boa h2{font-size:1.9rem;margin-bottom:18px}
+.mao-boa h2{font-size:1.85rem;margin-bottom:16px}
 .mao-boa img{border-radius:20px;box-shadow:0 14px 34px rgba(90,70,50,.14)}
 
 /* seção 3: cards */
-.section-title{text-align:center;max-width:640px;margin:0 auto 44px}
-.section-title h2{font-size:1.9rem;margin-top:10px}
-.grid-6{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.grid-6 .card{display:flex;gap:14px;align-items:flex-start}
-.grid-6 .card .ic{font-size:1.4rem;color:var(--terracotta);flex-shrink:0}
-.grid-6 .card p{margin:0;font-size:.94rem}
+.grid-6{display:grid;grid-template-columns:repeat(6,1fr);gap:18px}
+.grid-6 .card{text-align:center;padding:22px 16px}
+.grid-6 .ic{margin-bottom:12px;justify-content:center;width:100%}
+.grid-6 .card p{margin:0;font-size:.86rem}
 
 /* seção 4: materiais */
-.materiais-item{display:grid;grid-template-columns:220px 1fr;gap:34px;align-items:center;padding:26px 0;border-bottom:1px solid var(--cream-dark)}
-.materiais-item:last-child{border-bottom:none}
-.materiais-item img{border-radius:16px;box-shadow:0 10px 26px rgba(90,70,50,.15)}
-.materiais-item h3{font-size:1.25rem;margin-bottom:8px}
-.materiais-item p{margin:0;color:#6b6255;font-size:.95rem}
-.soon-box{width:220px;height:280px;border-radius:16px;background:var(--cream-dark);display:flex;flex-direction:column;
-  align-items:center;justify-content:center;gap:10px;color:var(--sage);border:2px dashed var(--sage)}
-.soon-box .ic{font-size:2rem}
+.materiais-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.materiais-grid .card{padding:16px;display:flex;flex-direction:column;gap:10px}
+.materiais-grid .thumbs{display:flex;gap:8px}
+.materiais-grid .thumbs img{border-radius:10px;box-shadow:0 6px 16px rgba(90,70,50,.12);width:50%}
+.materiais-grid h3{font-size:1rem;margin:4px 0 2px}
+.materiais-grid p{margin:0;font-size:.84rem;color:#6b6255}
 
 /* seção 5: use do seu jeito */
 .uso-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 .uso-grid .card{text-align:center}
-.uso-grid .ic{font-size:1.8rem;color:var(--terracotta);margin-bottom:12px}
+.uso-grid .ic{margin-bottom:14px;justify-content:center;width:100%}
 .uso-grid h3{font-size:1.05rem;margin-bottom:8px}
 .uso-grid p{margin:0;font-size:.9rem;color:#6b6255}
 
 /* seção 6: antes e depois */
-.antes-depois{background:var(--cream-dark)}
-.ad-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:40px}
-.ad-grid .card ul{list-style:none;margin:0;padding:0}
-.ad-grid .card li{padding:8px 0;font-size:.95rem;display:flex;gap:10px}
-.ad-grid .card.antes h3{color:#a08668}
-.ad-grid .card.depois h3{color:var(--sage)}
+.ad-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:36px}
+.ad-panel{border-radius:20px;padding:30px}
+.ad-panel.antes{background:var(--peach)}
+.ad-panel.depois{background:#e4e9d8}
+.ad-panel h3{font-size:1.1rem;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.ad-panel ul{list-style:none;margin:0;padding:0}
+.ad-panel li{padding:8px 0;font-size:.92rem;display:flex;gap:10px;align-items:center}
+.ad-panel.antes .ic{color:#b0785a}
+.ad-panel.depois .ic{color:var(--olive)}
 
 /* seção 7: como funciona */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;position:relative}
 .steps .card{text-align:center}
-.steps .num{width:40px;height:40px;border-radius:50%;background:var(--terracotta);color:#fff;display:flex;
-  align-items:center;justify-content:center;font-weight:700;margin:0 auto 14px}
+.steps .num{width:52px;height:52px;border-radius:50%;background:var(--olive);color:#fff;display:flex;
+  align-items:center;justify-content:center;margin:0 auto 14px}
 
 /* seção 8: oferta */
 .oferta{background:linear-gradient(135deg,var(--cream-dark),var(--cream))}
 .oferta-box{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
 .oferta .card{padding:44px}
-.preco{font-size:2.6rem;font-family:'Playfair Display',serif;color:var(--terracotta);font-weight:700;margin:14px 0 4px}
-.preco-sub{font-size:.85rem;color:#6b6255;margin-bottom:26px}
+.preco{font-size:2.5rem;font-family:'Playfair Display',serif;color:var(--olive);font-weight:700;margin:14px 0 4px}
+.preco-sub{font-size:.85rem;color:#6b6255;margin-bottom:24px}
 .oferta-lista{list-style:none;margin:0 0 26px;padding:0}
-.oferta-lista li{padding:6px 0;font-size:.92rem}
-.oferta-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.oferta-imgs img{border-radius:14px;box-shadow:0 10px 24px rgba(90,70,50,.15)}
+.oferta-lista li{padding:6px 0;font-size:.9rem;display:flex;gap:10px;align-items:center}
+.oferta-lista .ic{color:var(--olive)}
+.oferta-badges{display:flex;gap:20px;margin-top:22px;flex-wrap:wrap}
+.oferta-badges span{display:flex;align-items:center;gap:6px;font-size:.78rem;color:#6b6255}
+.oferta-collage{position:relative;height:380px}
+.oferta-collage img{position:absolute;width:46%;border-radius:14px;box-shadow:0 12px 26px rgba(90,70,50,.18)}
+.oferta-collage img:nth-child(1){top:0;left:6%;transform:rotate(-6deg);z-index:2}
+.oferta-collage img:nth-child(2){top:6%;right:2%;transform:rotate(4deg);z-index:1}
+.oferta-collage img:nth-child(3){bottom:0;left:16%;transform:rotate(3deg);z-index:3}
+.oferta-collage img:nth-child(4){bottom:4%;right:10%;transform:rotate(-4deg)}
 
 /* faq */
-.faq-item{border-bottom:1px solid var(--cream-dark);padding:20px 0}
-.faq-item h3{font-size:1.05rem;margin-bottom:8px;color:var(--brown)}
-.faq-item p{margin:0;color:#6b6255;font-size:.92rem}
+.faq-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.faq-grid .card{text-align:center}
+.faq-grid .ic{margin-bottom:12px;justify-content:center;width:100%}
+.faq-grid h3{font-size:.98rem;margin-bottom:8px;color:var(--brown)}
+.faq-grid p{margin:0;color:#6b6255;font-size:.85rem}
 
 /* cta final */
-.cta-final{text-align:center;background:var(--brown);color:#fff}
-.cta-final h2{color:#fff;font-size:2rem;margin-bottom:26px}
-.cta-final .btn{background:var(--terracotta)}
-.cta-final .tags{display:flex;justify-content:center;gap:28px;margin-top:36px;flex-wrap:wrap;font-size:.85rem;opacity:.85}
+.cta-final{text-align:center}
+.cta-final h2{font-size:1.95rem;margin-bottom:10px}
+.cta-final .eyebrow{display:block;margin-bottom:18px}
+.cta-final .tags{display:flex;justify-content:center;gap:30px;margin-top:34px;flex-wrap:wrap;font-size:.85rem;color:#6b6255}
+.cta-final .tags span{display:flex;align-items:center;gap:8px}
+.cta-final .ic{color:var(--olive)}
 
 footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
 
+@media (max-width:960px){
+  .grid-6{grid-template-columns:repeat(3,1fr)}
+  .materiais-grid{grid-template-columns:repeat(2,1fr)}
+  .faq-grid{grid-template-columns:repeat(2,1fr)}
+}
 @media (max-width:860px){
   .hero .wrap, .mao-boa .wrap, .oferta-box{grid-template-columns:1fr}
-  .grid-6, .uso-grid, .steps, .ad-grid{grid-template-columns:1fr}
-  .materiais-item{grid-template-columns:1fr;text-align:center}
-  .materiais-item img{margin:0 auto}
-  .soon-box{margin:0 auto}
+  .uso-grid, .steps, .ad-grid{grid-template-columns:1fr}
+  .oferta-collage{height:300px}
   .hero h1{font-size:2rem}
+}
+@media (max-width:640px){
+  .grid-6, .materiais-grid, .faq-grid{grid-template-columns:1fr}
 }
 </style>
 </head>
@@ -143,20 +164,20 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
   <div class="wrap">
     <div class="reveal">
       <span class="eyebrow">Kit digital · 7 materiais</span>
-      <h1>Cuide das suas plantas sem <span class="script">medo de errar</span> e tenha um cantinho verde bonito o ano inteiro</h1>
+      <h1>Cuide das suas plantas <span class="script">sem medo de errar</span> e tenha um cantinho verde bonito o ano inteiro</h1>
       <p class="lead">Um kit completo de planners, guias e checklists para você regar, podar, adubar e multiplicar suas plantas com segurança — mesmo que você ache que não tem mão boa.</p>
-      <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO CUIDAR DAS MINHAS PLANTAS</a>
+      <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO CUIDAR DAS MINHAS PLANTAS <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       <div class="hero-stats">
-        <div><span class="ic">🌱</span> Plantas mais bonitas</div>
-        <div><span class="ic">📋</span> Rotina mais simples</div>
-        <div><span class="ic">💧</span> Menos plantas perdidas</div>
-        <div><span class="ic">🕐</span> Mais tempo no seu cantinho verde</div>
+        <div><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21V11"/><path d="M12 11C12 11 12 4 6 4c0 6 6 7 6 7z"/><path d="M12 11c0 0 0-5 6-5 0 5-6 6-6 6z"/></svg></span> Plantas mais bonitas</div>
+        <div><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg></span> Rotina mais simples</div>
+        <div><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg></span> Menos plantas perdidas</div>
+        <div><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5l9-7 9 7"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></span> Mais tempo no seu cantinho verde</div>
       </div>
     </div>
     <div class="hero-img reveal">
       <img src="/assets/kit/capa-planner.jpg" alt="Planner do Meu Jardim">
       <div class="hero-mockups">
-        <img src="/assets/kit/capa-checklist.jpg" alt="Checklist de Cuidados">
+        <img src="/assets/kit/capa-rotina-semanal.jpg" alt="Rotina Semanal do Jardim">
         <img src="/assets/kit/capa-guia-poda.jpg" alt="Guia de Poda">
         <img src="/assets/kit/capa-guia-mudas.jpg" alt="Guia de Mudas">
       </div>
@@ -181,54 +202,62 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
       <span class="eyebrow">Pra quem é</span>
       <h2>Esse kit é para você que...</h2>
     </div>
+    <div style="height:30px"></div>
     <div class="grid-6 reveal">
-      <div class="card"><span class="ic">🥀</span><p>já perdeu planta sem entender o motivo</p></div>
-      <div class="card"><span class="ic">💧</span><p>nunca sabe se está regando demais ou de menos</p></div>
-      <div class="card"><span class="ic">✂️</span><p>tem medo de podar e acabar estragando</p></div>
-      <div class="card"><span class="ic">🌾</span><p>esquece de adubar e só lembra quando a planta reclama</p></div>
-      <div class="card"><span class="ic">🌿</span><p>quer multiplicar suas plantas e não sabe por onde começar</p></div>
-      <div class="card"><span class="ic">🏡</span><p>quer um cantinho verde bonito sem virar um trabalho a mais</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21V11"/><path d="M12 11C12 11 12 4 6 4c0 6 6 7 6 7z"/><path d="M12 11c0 0 0-5 6-5 0 5-6 6-6 6z"/></svg></span><p>já perdeu planta sem entender o motivo</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.7l5.7 5.7a8 8 0 1 1-11.4 0z"/></svg></span><p>nunca sabe se está regando demais ou de menos</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.1" y2="15.9"/><line x1="14.5" y1="14.5" x2="20" y2="20"/><line x1="8.1" y1="8.1" x2="12" y2="12"/></svg></span><p>tem medo de podar e acabar estragando</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.3 7 12 12 20.7 7"/><line x1="12" y1="22" x2="12" y2="12"/></svg></span><p>esquece de adubar e só lembra quando a planta reclama</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M17 2l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 22l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></span><p>quer multiplicar suas plantas e não sabe por onde começar</p></div>
+      <div class="card"><span class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5l9-7 9 7"/><path d="M5 9.5V20a1 1 0 0 0 1 1h4v-6h4v6h4a1 1 0 0 0 1-1V9.5"/></svg></span><p>quer um cantinho verde bonito sem virar um trabalho a mais</p></div>
     </div>
   </div>
 </section>
 
-<section class="cream">
-  <div class="wrap">
+<section class="mao-boa">
+  <div class="wrap" style="display:block">
     <div class="section-title reveal">
       <span class="eyebrow">O kit completo</span>
       <h2>Tudo o que você vai receber</h2>
+      <div class="section-sub">7 materiais completos para te acompanhar em todas as etapas</div>
     </div>
-    <div class="reveal">
+    <div class="materiais-grid reveal">
       
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-planner.jpg" alt="Planner do Meu Jardim">
-        <div><h3>Planner do Meu Jardim</h3><p>Organize suas plantas, regas e anotações num só lugar.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-planner.jpg" alt="Página interna — Planner do Meu Jardim"></div>
+        <h3>Planner do Meu Jardim</h3><p>Planeje, organize e acompanhe o cuidado das suas plantas.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-checklist.jpg" alt="Checklist de Cuidados por Tipo de Planta">
-        <div><h3>Checklist de Cuidados por Tipo de Planta</h3><p>Suculentas, orquídeas, folhagens e temperos — o que cada uma pede.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-checklist.jpg" alt="Página interna — Checklist de Cuidados por Tipo de Planta"></div>
+        <h3>Checklist de Cuidados por Tipo de Planta</h3><p>Um guia prático pra cada tipo de planta.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-rotina-semanal.jpg" alt="Rotina Semanal do Jardim">
-        <div><h3>Rotina Semanal do Jardim</h3><p>Um plano simples pra nunca mais esquecer de cuidar.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-rotina.jpg" alt="Página interna — Rotina Semanal do Jardim"></div>
+        <h3>Rotina Semanal do Jardim</h3><p>Crie o hábito de cuidar e veja resultados sem complicação.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-guia-poda.jpg" alt="Guia de Poda Descomplicada">
-        <div><h3>Guia de Poda Descomplicada</h3><p>Cortes certos, sem medo de estragar a planta.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-poda.jpg" alt="Página interna — Guia de Poda Descomplicada"></div>
+        <h3>Guia de Poda Descomplicada</h3><p>Aprenda a podar com segurança e deixe suas plantas mais bonitas.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-guia-mudas.jpg" alt="Guia de Mudas e Propagação">
-        <div><h3>Guia de Mudas e Propagação</h3><p>Multiplique suas plantas favoritas com segurança.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-mudas.jpg" alt="Página interna — Guia de Mudas e Propagação"></div>
+        <h3>Guia de Mudas e Propagação</h3><p>Multiplique suas plantas e tenha mais verde em casa.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-ferramentas.jpg" alt="Guia de Ferramentas Essenciais">
-        <div><h3>Guia de Ferramentas Essenciais</h3><p>O que você realmente precisa ter em casa.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-ferramentas.jpg" alt="Página interna — Guia de Ferramentas Essenciais"></div>
+        <h3>Guia de Ferramentas Essenciais</h3><p>Conheça as ferramentas certas pra um cuidado mais fácil e eficiente.</p>
       </div>
-      <div class="materiais-item">
+      <div class="card">
         <img src="/assets/kit/capa-7dias.jpg" alt="Plano Jardim Vivo em 7 Dias">
-        <div><h3>Plano Jardim Vivo em 7 Dias</h3><p>Uma semana pra organizar seu cantinho verde do zero.</p></div>
+        <div class="thumbs"><img src="/assets/kit/pag-7dias.jpg" alt="Página interna — Plano Jardim Vivo em 7 Dias"></div>
+        <h3>Plano Jardim Vivo em 7 Dias</h3><p>Um passo a passo simples pra começar agora e ver a diferença.</p>
       </div>
-      
     </div>
   </div>
 </section>
@@ -239,38 +268,11 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
       <span class="eyebrow">Flexível</span>
       <h2>Use do seu jeito</h2>
     </div>
+    <div style="height:30px"></div>
     <div class="uso-grid reveal">
-      <div class="card"><div class="ic">📱</div><h3>No celular ou tablet</h3><p>Consulte na hora de regar ou podar, ali na frente da planta.</p></div>
-      <div class="card"><div class="ic">💻</div><h3>No computador</h3><p>Visualize e organize com mais espaço.</p></div>
-      <div class="card"><div class="ic">🖨️</div><h3>Impresso</h3><p>Imprima suas páginas favoritas.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="antes-depois">
-  <div class="wrap">
-    <div class="section-title reveal">
-      <h2>De plantas no sufoco para um cantinho verde que <span class="script">se mantém</span></h2>
-    </div>
-    <div class="ad-grid reveal">
-      <div class="card antes">
-        <h3>Antes</h3>
-        <ul>
-          <li>😕 regar no achismo</li>
-          <li>😕 folha amarela sem explicação</li>
-          <li>😕 medo de podar</li>
-          <li>😕 planta que nunca cresce</li>
-        </ul>
-      </div>
-      <div class="card depois">
-        <h3>Depois</h3>
-        <ul>
-          <li>🌿 rega na medida certa</li>
-          <li>🌿 sinais que você entende</li>
-          <li>🌿 poda no lugar certo</li>
-          <li>🌿 plantas firmes e bonitas</li>
-        </ul>
-      </div>
+      <div class="card"><span class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></span><h3>No celular ou tablet</h3><p>Consulte na hora de regar ou podar, ali na frente da planta.</p></div>
+      <div class="card"><span class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span><h3>No computador</h3><p>Visualize e organize com mais espaço.</p></div>
+      <div class="card"><span class="ic"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span><h3>Impresso</h3><p>Imprima suas páginas favoritas.</p></div>
     </div>
   </div>
 </section>
@@ -278,13 +280,43 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
 <section>
   <div class="wrap">
     <div class="section-title reveal">
+      <h2>De plantas no sufoco para um cantinho verde que <span class="script">se mantém</span></h2>
+    </div>
+    <div class="ad-grid reveal">
+      <div class="ad-panel antes">
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Antes</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> regar no achismo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> folha amarela sem explicação</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> medo de podar</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> planta que nunca cresce</li>
+        </ul>
+      </div>
+      <div class="ad-panel depois">
+        <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Depois</h3>
+        <ul>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> rega na medida certa</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> sinais que você entende</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> poda no lugar certo</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> plantas firmes e bonitas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="mao-boa">
+  <div class="wrap">
+    <div class="section-title reveal" style="grid-column:1/-1;max-width:100%">
       <span class="eyebrow">Simples assim</span>
       <h2>Como funciona</h2>
     </div>
+  </div>
+  <div class="wrap" style="display:block">
     <div class="steps reveal">
-      <div class="card"><div class="num">1</div><h3>Faça sua compra</h3><p>Finalize com segurança.</p></div>
-      <div class="card"><div class="num">2</div><h3>Receba o acesso</h3><p>Entre na área de membros.</p></div>
-      <div class="card"><div class="num">3</div><h3>Comece a usar</h3><p>Acesse os materiais e cuide das suas plantas.</p></div>
+      <div class="card"><div class="num"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg></div><h3>Faça sua compra</h3><p>Finalize com segurança.</p></div>
+      <div class="card"><div class="num"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22 6 12 13 2 6"/></svg></div><h3>Receba o acesso</h3><p>Entre na área de membros.</p></div>
+      <div class="card"><div class="num"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21V11"/><path d="M12 11C12 11 12 4 6 4c0 6 6 7 6 7z"/><path d="M12 11c0 0 0-5 6-5 0 5-6 6-6 6z"/></svg></div><h3>Comece a usar</h3><p>Acesse os materiais e cuide das suas plantas.</p></div>
     </div>
   </div>
 </section>
@@ -296,17 +328,22 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
         <span class="eyebrow">Oferta</span>
         <h2>Leve agora o Kit Lar Verde</h2>
         <ul class="oferta-lista">
-          <li>🌿 Planner do Meu Jardim</li><li>🌿 Checklist de Cuidados por Tipo de Planta</li><li>🌿 Rotina Semanal do Jardim</li><li>🌿 Guia de Poda Descomplicada</li><li>🌿 Guia de Mudas e Propagação</li><li>🌿 Guia de Ferramentas Essenciais</li><li>🌿 Plano Jardim Vivo em 7 Dias</li>
+          <li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Planner do Meu Jardim</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Checklist de Cuidados por Tipo de Planta</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Rotina Semanal do Jardim</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guia de Poda Descomplicada</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guia de Mudas e Propagação</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Guia de Ferramentas Essenciais</li><li><span class='ic'><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span> Plano Jardim Vivo em 7 Dias</li>
         </ul>
         <div class="preco">R$ 29,90</div>
         <div class="preco-sub">Pagamento único • Acesso digital</div>
-        <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO ACESSAR O KIT AGORA</a>
+        <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO ACESSAR O KIT AGORA <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <div class="oferta-badges">
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg> Compra segura</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M7 21h10"/><path d="M12 21V11"/><path d="M12 11C12 11 12 4 6 4c0 6 6 7 6 7z"/><path d="M12 11c0 0 0-5 6-5 0 5-6 6-6 6z"/></svg> Acesso imediato</span>
+          <span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.7 1-1a5.5 5.5 0 0 0 0-7.9z"/></svg> Seu jardim mais feliz</span>
+        </div>
       </div>
-      <div class="oferta-imgs reveal">
+      <div class="oferta-collage reveal">
         <img src="/assets/kit/capa-planner.jpg" alt="">
-        <img src="/assets/kit/capa-rotina-semanal.jpg" alt="">
         <img src="/assets/kit/capa-guia-poda.jpg" alt="">
         <img src="/assets/kit/capa-guia-mudas.jpg" alt="">
+        <img src="/assets/kit/capa-ferramentas.jpg" alt="">
       </div>
     </div>
   </div>
@@ -318,21 +355,26 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
       <span class="eyebrow">Perguntas frequentes</span>
       <h2>Dúvidas Frequentes</h2>
     </div>
-    <div class="reveal" style="max-width:720px;margin:0 auto">
-      <div class="faq-item"><h3>O material é físico?</h3><p>Não. O conteúdo é digital em PDF.</p></div>
-      <div class="faq-item"><h3>Quando recebo o acesso?</h3><p>O acesso acontece pela área de membros conforme a liberação dos materiais.</p></div>
-      <div class="faq-item"><h3>Preciso imprimir?</h3><p>Não. Você pode usar digitalmente ou imprimir.</p></div>
-      <div class="faq-item"><h3>Serve para qualquer planta?</h3><p>Sim. Os materiais cobrem suculentas, orquídeas, folhagens, temperos, flores e frutíferas em vaso.</p></div>
+    <div style="height:30px"></div>
+    <div class="faq-grid reveal">
+      <div class="card"><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span><h3>O material é físico?</h3><p>Não. O conteúdo é digital em PDF.</p></div>
+      <div class="card"><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></span><h3>Quando recebo o acesso?</h3><p>Pela área de membros conforme a liberação dos materiais.</p></div>
+      <div class="card"><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg></span><h3>Preciso imprimir?</h3><p>Não. Você pode usar digitalmente ou imprimir.</p></div>
+      <div class="card"><span class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-5 4-9 8-9 13a9 9 0 0 0 18 0c0-5-4-9-9-13z"/><path d="M12 22V9"/></svg></span><h3>Serve para qualquer planta?</h3><p>Sim: suculentas, orquídeas, folhagens, temperos, flores e frutíferas.</p></div>
     </div>
   </div>
 </section>
 
 <section class="cta-final">
   <div class="wrap reveal">
+    <span class="eyebrow">Planeje · Cuide · Floresça · Seja mais você</span>
     <h2>Um cantinho verde bonito começa com pequenos cuidados.</h2>
-    <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO MEU KIT LAR VERDE</a>
+    <a class="btn" href="https://pay.kiwify.com.br/qOu9IOd">QUERO MEU KIT LAR VERDE <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     <div class="tags">
-      <span>Mais verde</span><span>Mais leveza</span><span>Mais segurança</span><span>Mais você</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3c-5 4-9 8-9 13a9 9 0 0 0 18 0c0-5-4-9-9-13z"/><path d="M12 22V9"/></svg> Mais verde</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.7 1-1a5.5 5.5 0 0 0 0-7.9z"/></svg> Mais leveza</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"/><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"/><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"/></svg> Mais segurança</span>
+      <span><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> Mais você</span>
     </div>
   </div>
 </section>
@@ -343,7 +385,7 @@ footer.kit{text-align:center;padding:26px 0;font-size:.8rem;color:#a89a88}
 var els = document.querySelectorAll('.reveal');
 var obs = new IntersectionObserver(function(entries){
   entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('in'); });
-}, {threshold:.15});
+}, {threshold:.12});
 els.forEach(function(el){ obs.observe(el); });
 </script>
 </body>
