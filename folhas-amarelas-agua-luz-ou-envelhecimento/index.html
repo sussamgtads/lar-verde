@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folhas Amarelas: Água, Luz ou Idade? Guia de Diagnóstico</title>
+<meta name="description" content="Folha amarela nem sempre é sinal de rega errada. Aprenda a diferenciar excesso de água, falta de luz e envelhecimento natural antes de agir.">
+<link rel="canonical" href="https://larverde.com.br/folhas-amarelas-agua-luz-ou-envelhecimento/">
+<meta property="og:title" content="Folhas Amarelas: Água, Luz ou Idade? Guia de Diagnóstico">
+<meta property="og:description" content="Folha amarela nem sempre é sinal de rega errada. Aprenda a diferenciar excesso de água, falta de luz e envelhecimento natural antes de agir.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://larverde.com.br/folhas-amarelas-agua-luz-ou-envelhecimento/">
+<link rel="icon" href="/assets/images/cropped-logo-2.png">
+<style>
+:root{--green:#2f6b3f;--green-dark:#1f4a2b;--cream:#f7f5ef;--text:#2b2b26;--muted:#6b6b60;--border:#e4e0d4;}
+*{box-sizing:border-box}
+body{margin:0;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;background:var(--cream);color:var(--text);line-height:1.6}
+a{color:var(--green-dark);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;height:auto;display:block;border-radius:8px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header.site{background:var(--green-dark);color:#fff;padding:16px 0}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px}
+header.site a{color:#fff}
+.brand{font-size:1.35rem;font-weight:700;display:flex;align-items:center;gap:10px}
+.brand img{width:36px;height:36px;border-radius:8px}
+nav.cats{display:flex;gap:14px;flex-wrap:wrap;font-size:.88rem;opacity:.95;flex:1}
+.nav-toggle{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:6px;padding:6px 10px;font-size:.85rem;cursor:pointer}
+.shop-btn{background:#fff;color:var(--green-dark)!important;padding:8px 16px;border-radius:20px;font-size:.85rem;font-weight:700;white-space:nowrap;text-decoration:none!important}
+.shop-btn:hover{background:#eee}
+main{padding:36px 0 60px}
+.hero{padding:0 0 22px}
+.hero h1{font-size:1.7rem;margin:0 0 4px}
+.hero p{color:var(--muted);margin:0}
+.layout{display:flex;gap:44px;align-items:flex-start}
+.col-main{flex:2;min-width:0}
+.col-side{flex:1;min-width:260px;max-width:300px}
+
+/* post list card */
+.postcard{margin-bottom:44px;padding-bottom:38px;border-bottom:1px solid var(--border)}
+.postcard:last-child{border-bottom:none}
+.postcard .cats{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:8px}
+.postcard .cats a{color:var(--green)}
+.postcard .cats a:not(:last-child)::after{content:", "}
+.postcard h2{font-size:1.5rem;margin:0 0 16px;line-height:1.3}
+.postcard h2 a{color:var(--text)}
+.postcard .thumb{margin-bottom:16px}
+.postcard .thumb img{aspect-ratio:16/9;object-fit:cover;width:100%}
+.postcard .excerpt{color:#444;margin-bottom:12px}
+.postcard .byline{font-size:.75rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+
+/* article */
+article.post{max-width:100%}
+article.post .cats{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
+article.post .cats a{color:var(--green)}
+article.post .cats a:not(:last-child)::after{content:", "}
+article.post h1{font-size:2rem;margin:0 0 10px;line-height:1.25}
+article.post .byline{font-size:.78rem;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+article.post .cover{margin:0 0 26px}
+article.post .content h2{font-size:1.35rem;margin-top:1.8em}
+article.post .content h3{font-size:1.1rem;margin-top:1.5em}
+article.post .content p{margin:1em 0}
+article.post .content ul,article.post .content ol{padding-left:1.4em}
+article.post .content figure{margin:1.6em 0}
+
+.page-content h1{font-size:1.8rem}
+
+/* author box + related posts */
+.author-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin:36px 0}
+.author-box .avatar{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;flex-shrink:0}
+.author-box h4{margin:0 0 6px;font-size:1rem}
+.author-box p{margin:0;color:var(--muted);font-size:.92rem}
+.related{margin:36px 0}
+.related h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 14px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.related ul{list-style:none;margin:0;padding:0}
+.related li{margin-bottom:8px}
+
+/* sidebar */
+.widget{margin-bottom:34px}
+.widget h3{font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:var(--green-dark);margin:0 0 16px;padding-bottom:8px;border-bottom:2px solid var(--border)}
+.search-form{display:flex;gap:0}
+.search-form input{flex:1;padding:9px 10px;border:1px solid var(--border);border-radius:4px 0 0 4px;font-size:.9rem}
+.search-form button{background:var(--green);color:#fff;border:none;padding:9px 14px;border-radius:0 4px 4px 0;cursor:pointer;font-size:.9rem}
+.recent-item{display:flex;gap:12px;margin-bottom:14px}
+.recent-item img{width:60px;height:60px;object-fit:cover;flex-shrink:0}
+.recent-item .t{font-size:.85rem;line-height:1.35}
+.recent-item .t a{color:var(--text)}
+.archive-list, .cat-list{list-style:none;margin:0;padding:0;font-size:.9rem}
+.archive-list li, .cat-list li{margin-bottom:8px;display:flex;justify-content:space-between}
+.cat-list .count{color:var(--muted);font-size:.82rem}
+
+/* pagination */
+.pagination{display:flex;gap:10px;justify-content:center;margin-top:10px}
+.pagination a,.pagination span{padding:8px 14px;border:1px solid var(--border);border-radius:6px;font-size:.88rem}
+.pagination .current{background:var(--green-dark);color:#fff;border-color:var(--green-dark)}
+
+footer.site{background:var(--green-dark);color:#d8e6da;padding:30px 0;margin-top:40px;font-size:.9rem}
+footer.site a{color:#fff}
+footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
+.crumbs{font-size:.85rem;color:var(--muted);margin-bottom:14px}
+.backlink{display:inline-block;margin-top:30px}
+@media (max-width:860px){.layout{flex-direction:column}.col-side{max-width:100%;order:-1}}
+@media (max-width:640px){
+  nav.cats{display:none;width:100%;flex-direction:column;gap:8px;padding-top:10px}
+  nav.cats.open{display:flex}
+  .nav-toggle{display:block}
+}
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@graph": [{"@type": "Organization", "@id": "https://larverde.com.br/#organization", "name": "Lar Verde", "url": "https://larverde.com.br/", "logo": "https://larverde.com.br/assets/images/cropped-logo-1.png"}, {"@type": "WebSite", "@id": "https://larverde.com.br/#website", "url": "https://larverde.com.br/", "name": "Lar Verde", "description": "Jardinagem, plantas e casa com vida", "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}]}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real", "description": "Folha amarela nem sempre é sinal de rega errada. Aprenda a diferenciar excesso de água, falta de luz e envelhecimento natural antes de agir.", "image": null, "datePublished": "2026-09-21", "mainEntityOfPage": "https://larverde.com.br/folhas-amarelas-agua-luz-ou-envelhecimento/", "author": {"@type": "Person", "name": "Marcos Kulenkampff", "url": "https://larverde.com.br/autor-marcos-kulenkampff/"}, "publisher": {"@id": "https://larverde.com.br/#organization"}, "inLanguage": "pt-BR"}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Lar Verde", "item": "https://larverde.com.br/"}, {"@type": "ListItem", "position": 2, "name": "diagnóstico de plantas", "item": "https://larverde.com.br/categoria/diagnostico-de-plantas/"}, {"@type": "ListItem", "position": 3, "name": "Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real", "item": "https://larverde.com.br/folhas-amarelas-agua-luz-ou-envelhecimento/"}]}
+</script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/assets/images/cropped-logo-1.png" alt="Lar Verde" onerror="this.style.display='none'">Lar Verde</a>
+    <button class="nav-toggle" type="button" aria-label="Abrir menu de categorias">Categorias ▾</button>
+    <nav class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/bem-estar/">Bem-estar</a></nav>
+    <a class="shop-btn" href="/kit-lar-verde/">Loja Lar Verde</a>
+  </div>
+</header>
+<main><div class="wrap">
+<div class="layout"><div class="col-main">
+<div class="crumbs"><a href="/">Início</a> / <a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a></div>
+<article class="post">
+  <div class="cats"><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
+  <h1>Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real</h1>
+  <div class="byline">Marcos Kulenkampff &middot; Publicado em <time datetime="2026-09-21">21/09/2026</time></div>
+  
+  <div class="content"><p>Toda planta, um dia, vai te dar esse susto: uma folha lá no meio, ou pior, várias de uma vez, começam a ficar amarelas. E o primeiro impulso de quase todo mundo que está começando é o mesmo — pegar o regador. <strong>Folhas amarelas</strong>, só que na maioria das vezes, não é isso que a planta está pedindo. Eu já perdi mais de uma espécie por confiar nesse impulso, e demorei um bom tempo pra entender que existe uma diferença enorme entre a folha que amarela porque a planta está sofrendo e a folha que amarela porque, simplesmente, chegou a hora dela.</p>
+<p>Sou o Lar Verde, PhD em Botânica e, acima disso, alguém que já matou samambaia, já afogou suculenta e já deixou planta sem luz achando que 'qualquer canto de casa serve'. O que vou te mostrar aqui não é uma lista genérica de causas — é o roteiro que eu mesmo uso hoje pra parar de adivinhar e começar a diagnosticar. Porque, olha só, folha amarela é sintoma, não é diagnóstico. E tratar o sintoma errado só atrasa a solução do problema real.</p>
+<p>A boa notícia é que dá pra separar isso em três grandes grupos — excesso de água, falta de luz e envelhecimento natural — e cada um deixa pistas bem diferentes na planta, se você souber onde olhar. E é justamente essa observação atenta, feita antes de qualquer ação, que separa quem trata a causa real de quem só troca um sintoma por outro, semana após semana. Vamos por partes.</p>
+<h2>Água demais, água de menos: o primeiro suspeito nem sempre é o culpado</h2>
+<h3>Camada Básica</h3>
+<p>Quase todo mundo já ouviu que folha amarela é sinal de planta com sede. É verdade, mas só em parte. A folha amarela por falta de água costuma murchar antes de amarelar, fica com aspecto seco e crocante, e geralmente atinge as pontas primeiro. Já a folha amarela por excesso de água tem outra cara: fica mole, meio encharcada, às vezes com uma textura translúcida, e amarela de forma mais uniforme, começando pelas folhas mais velhas e da base.</p>
+<h3>Camada Intermediária</h3>
+<p>Na prática, o excesso de água é disparado a causa mais comum de folha amarela em planta de vaso — mais do que a falta de água, que costuma ser mais fácil de perceber porque a planta murcha visivelmente. O problema do excesso é que ele não avisa na hora: a raiz vai apodrecendo por dentro, sem oxigênio, e só quando o dano já está feito é que a folha começa a amarelar. Eu testei isso em casa comparando duas mudas da mesma espécie, uma regada em excesso por três semanas e outra em rega controlada — a primeira só mostrou folha amarela no fim da segunda semana, quando a raiz já estava comprometida. Se o seu vaso não tem furo de drenagem, ou se o pratinho fica com água acumulada por mais de uma hora depois da rega, esse é provavelmente o seu problema — vale revisar o <a href="/vaso-ideal-para-cada-planta/">vaso ideal para cada planta</a> antes de trocar qualquer outra coisa.</p>
+<h3>Camada Avançada</h3>
+<p>O mecanismo por trás disso é simples de entender: raiz encharcada fica sem oxigênio disponível no substrato, as células da raiz começam a morrer e a planta perde a capacidade de absorver os nutrientes que sustentam a produção de clorofila — o pigmento que dá a cor verde às folhas. Sem clorofila sendo repassada, a folha revela os pigmentos amarelos (carotenoides) que já estavam lá, só escondidos. Ou seja, a folha não “cria” a cor amarela — ela só deixa de mascarar o que sempre esteve embaixo do verde. É por isso que, em plantas com raiz apodrecida, a recuperação só é possível se a rega for suspensa e o substrato trocado a tempo; depois de um certo ponto, o processo é irreversível.</p>
+<p>Um detalhe que ajuda bastante no diagnóstico: enfie o dedo (ou um palito de madeira) a uns dois ou três centímetros de profundidade antes de decidir regar de novo. Se sair terra úmida e escura, ainda não é hora. Esse teste simples, feito antes de cada rega e não depois que a folha já amarelou, evita boa parte dos casos de excesso — porque o problema raramente é regar demais uma vez, e sim regar no automático, sempre no mesmo dia da semana, sem checar se a planta realmente precisava daquele volume de água naquele momento específico.</p>
+<h2>Luz: o fator que ninguém olha primeiro</h2>
+<h3>Camada Básica</h3>
+<p>Depois da água, o segundo instinto costuma ser adubo. Mas antes de qualquer adubo, vale parar e observar a luz. Planta que recebe luz insuficiente também amarela — e, curiosamente, o padrão costuma ser parecido com o do excesso de água: começa nas folhas mais velhas, de baixo pra cima, porque a planta redireciona os poucos recursos que tem pras folhas novas, que estão mais bem posicionadas pra captar luz.</p>
+<h3>Camada Intermediária</h3>
+<p>A diferença que eu aprendi a observar é o crescimento entre uma folha e outra. Quando é falta de luz, os entrenós ficam mais longos e a planta cresce “esticada”, meio fraca, buscando a claridade — é o chamado estiolamento. Já quando é problema de água, o crescimento simplesmente estagna, sem esse alongamento característico. Outro sinal prático: gire o vaso 90 graus e observe por duas semanas se as folhas novas nascem tortas, sempre na direção da fonte de luz mais próxima. Se sim, o ambiente está no limite do que a planta tolera. Isso é ainda mais comum em espécies que, por natureza, já tomam menos sol e acabam colocadas em cantos ainda mais escuros — vale conferir quais <a href="/plantas-que-se-adaptam-a-sombra/">plantas realmente se adaptam à sombra</a> antes de reposicionar tudo. Aqui no Brasil, como estamos no hemisfério sul, essa conta se inverte em relação ao que a maioria dos conteúdos gringos ensina: são as janelas voltadas para o norte que costumam receber luz mais direta e constante ao longo do dia, enquanto as voltadas para o sul tendem a ficar com luz mais difusa. Antes de concluir que uma planta está em ambiente ruim, vale checar pra que lado a janela do cômodo está voltada — muita gente troca de vaso, de terra e de adubo sem nunca ter olhado essa variável, que é de graça e resolve metade dos casos.</p>
+<h3>Camada Avançada</h3>
+<p>A luz não influencia só a fotossíntese direta — ela também regula a produção hormonal da planta, especialmente as auxinas, responsáveis por comandar pra onde o crescimento vai. Em condições de pouca luz, a planta prioriza manter viva a estrutura já formada e reduz drasticamente a renovação de clorofila nas folhas mais antigas, que passam a ser 'descartadas' primeiro — uma estratégia de sobrevivência, não uma falha da planta. Ambientes com menos de duas ou três horas de luz indireta e de qualidade tendem a acelerar esse processo, mesmo em espécies classificadas como 'tolerantes à sombra', porque tolerar não é o mesmo que prosperar.</p>
+<h2>Verdades que quase ninguém comenta sobre folhas amarelas</h2>
+<h3>Camada Básica</h3>
+<p>Existe uma verdade desconfortável que pouca gente fala: às vezes você fez tudo certo e a folha vai amarelar assim mesmo. Isso se chama senescência foliar, e é o processo natural de envelhecimento — toda folha tem um tempo de vida, e quando esse tempo acaba, ela amarela e cai pra planta redirecionar energia pro crescimento novo.</p>
+<h3>Camada Intermediária</h3>
+<p>O jeito prático de diferenciar: senescência natural costuma atingir só uma ou duas folhas isoladas, geralmente as mais velhas e mais próximas da base, num ritmo lento e pontual — uma folha muda de cor por semana, não por dia. Se você está vendo três, quatro, cinco folhas amarelando ao mesmo tempo, num intervalo curto, aí sim é sinal de estresse (água, luz ou nutriente), não de idade. Outra verdade pouco dita: deficiência de nitrogênio também causa amarelamento parecido com o de falta de luz, e boa parte das pessoas troca adubo sem nunca ter revisado se o problema não era simplesmente o vaso pequeno demais, com substrato exaurido depois de meses sem reposição.</p>
+<h3>Camada Avançada</h3>
+<p>O curioso é que a planta é bem mais eficiente nesse processo do que parece: antes de deixar cair a folha senescente, ela recicla praticamente todo o nitrogênio, fósforo e boa parte dos outros nutrientes móveis que estavam armazenados ali, transportando pra folhas novas ou pra reserva no caule. É basicamente uma “compostagem interna”. Isso explica por que, em muitos casos, adubar uma planta que só está passando por senescência natural não muda nada — o nutriente que “faltava” nunca foi o problema, porque a própria planta já estava redistribuindo o que tinha.</p>
+<p>Existe ainda uma terceira verdade incômoda: nem toda folha amarela com nervuras verdes é falta de luz. Esse padrão específico — o fundo da folha amarelado e as veias mantendo o verde — é clássico de deficiência de ferro ou magnésio, chamada tecnicamente de clorose. A diferença é que a clorose por deficiência mineral tende a aparecer primeiro nas folhas mais novas, no topo da planta, exatamente o oposto do padrão de senescência natural ou de excesso de água, que começam nas folhas mais velhas. Guardar essa regra — folha nova amarelando sugere nutriente ou água de irrigação muito alcalina, folha velha amarelando sugere idade, luz ou excesso de rega — evita boa parte dos diagnósticos trocados que eu mesmo já fiz.</p>
+<h2>Minha experiência pessoal com folhas amarelas</h2>
+<p>Eu confesso: demorei anos pra parar de regar toda planta que amarelava. Tive uma jiboia, de presente de aniversário, que eu quase matei de tanto “cuidado” — regava a cada dois dias porque via uma folha amarela e entrava em pânico. Só quando parei, observei o padrão (folhas isoladas, ritmo lento, planta com aparência geral saudável) e li sobre senescência foliar é que entendi que estava, sem saber, afogando uma planta que só estava envelhecendo normalmente.</p>
+<p>Hoje, antes de qualquer decisão, eu conto quantas folhas estão amarelando e em quanto tempo. Uma por semana, deixo quieta. Três ou mais na mesma quinzena, aí sim eu investigo água e luz antes de qualquer outra coisa. Nem sempre funciono nesse diagnóstico de primeira — outro dia confundi deficiência de ferro com falta de luz numa muda de rosa, porque os dois deixam a folha amarela com nervuras verdes, e só descobri o erro depois de mudar a planta de lugar sem melhora nenhuma. Ainda estou testando formas mais rápidas de diferenciar isso, e é por isso que gosto tanto desse processo — plantas não dão respostas prontas, elas dão pistas, e cabe a quem cuida aprender a lê-las com calma.</p>
+<h2>Conclusão</h2>
+<p>Se teve um aprendizado que essas plantas amareladas me deixaram, foi esse: reagir rápido nem sempre é cuidar bem. Antes de regar mais, adubar ou trocar de vaso, vale parar dois minutos e observar onde a folha amarela está (base ou topo), o ritmo (uma por semana ou várias juntas) e a textura (murcha e seca, ou mole e encharcada). Essas três perguntas resolvem a maioria dos casos sem nenhum produto novo — e a <a href="/limpeza-correta-das-folhas/">limpeza correta das folhas</a> ajuda até a enxergar melhor esses sinais no dia a dia.</p>
+<p>E se você está começando agora nessa jornada e sente que toda planta parece um mistério, respira: até os <a href="/plantas-faceis-para-iniciantes/">cuidados com plantas fáceis para iniciantes</a> passam por esse aprendizado de observação. Comece hoje: escolha uma planta sua que tenha folha amarela agora, anote onde ela está e volte aqui nos comentários me contando o padrão que você encontrou — eu quero saber se o diagnóstico bateu. E se puder, revise também os <a href="/cuidados-essenciais-plantas-de-interior/">cuidados essenciais para plantas de interior</a> desta semana; boa parte dos amarelamentos evitáveis nasce ali, na rotina básica que a gente acha que já domina.</p>
+<p>No fim das contas, cuidar de planta é menos sobre acertar de primeira e mais sobre desconfiar do próprio impulso. Da próxima vez que uma folha amarelar, resista à vontade de agir na hora — observe primeiro, anote o padrão, e só depois decida o que fazer. Esse minuto de pausa é, sem exagero, o cuidado mais importante que você vai dar pra sua planta hoje.</p></div>
+  <div class="author-box">
+  <div class="avatar">MK</div>
+  <div>
+    <h4>Escrito por <a href="/autor-marcos-kulenkampff/">Marcos Kulenkampff</a></h4>
+    <p>Marcos Kulenkampff é o criador do Lar Verde. Aprendeu jardinagem na prática — errando, perdendo planta, testando técnica que não funcionou — cultivando em espaços pequenos reais, sem romantização.</p>
+  </div>
+</div>
+  <div class="related"><h3>Leia também</h3><ul><li><a href="/plantas-para-escritorio-home-office/">Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho</a></li><li><a href="/animais-estimacao-plantas/">Como Cuidar de Animais de Estimação e Plantas em Casa</a></li><li><a href="/plantas-nao-toxicas-para-animais-de-estimacao/">Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas</a></li></ul></div>
+  <a class="backlink" href="/">&larr; Voltar para o início</a>
+</article>
+</div>
+<aside class="col-side">
+  <div class="widget">
+    <h3>Posts recentes</h3>
+    
+    <div class="recent-item">
+      <img src="/assets/images/horta-vertical-varanda-apartamento.webp" alt="">
+      <div class="t"><a href="/como-criar-sua-horta-vertical-e-cultivar-alimentos-em-pouco-espaco/">Como Criar sua Horta Vertical e Cultivar Alimentos em Pouco Espaço</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/compostagem-domestica-passo-a-passo.webp" alt="">
+      <div class="t"><a href="/compostagem-domestica-passo-a-passo/">Compostagem doméstica: passo a passo fácil para iniciantes e transforme seus resíduos em adubo</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/cultivar-temperos-em-apartamento-pequeno.webp" alt="">
+      <div class="t"><a href="/cultivar-temperos-em-apartamento-pequeno/">🌿 Como Cultivar Temperos em Apartamentos Pequenos e Transformar sua Cozinha</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/horta-caseira-guia-completo.webp" alt="">
+      <div class="t"><a href="/horta-caseira-guia-completo/">Horta Caseira: Guia Completo para Montar a Sua do Zero</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/plantas-para-escritorio-home-office.webp" alt="">
+      <div class="t"><a href="/plantas-para-escritorio-home-office/">Plantas perfeitas para escritórios e home office: como transformar seu espaço de trabalho</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/sala-plantas-cachorro-curioso.webp" alt="">
+      <div class="t"><a href="/animais-estimacao-plantas/">Como Cuidar de Animais de Estimação e Plantas em Casa</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/plantas-nao-toxicas-pets-sala.webp" alt="">
+      <div class="t"><a href="/plantas-nao-toxicas-para-animais-de-estimacao/">Plantas não tóxicas para animais de estimação: Como Escolher as Espécies Certas</a></div>
+    </div>
+    <div class="recent-item">
+      <img src="/assets/images/organizar-cuidar-ferramentas-jardim.webp" alt="">
+      <div class="t"><a href="/organizar-cuidar-ferramentas-jardim/">Organizar e cuidar das ferramentas de jardim: guia prático para prolongar a vida dos seus utensílios</a></div>
+    </div>
+  </div>
+  <div class="widget">
+    <h3>Arquivos</h3>
+    <ul class="archive-list"><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">7</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">37</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">4</span></li><li><a href="/arquivo/2026-09/">Setembro de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">2</span></li></ul>
+  </div>
+  <div class="widget">
+    <h3>Categorias</h3>
+    <ul class="cat-list"><li><a href="/categoria/bem-estar/">Bem-estar</a> <span class="count">2</span></li><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">6</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">9</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">41</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">12</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">20</span></li><li><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a> <span class="count">1</span></li></ul>
+  </div>
+  <div class="widget">
+    <h3>Pesquisar</h3>
+    <form class="search-form" action="/busca/" method="get">
+      <input type="text" name="q" placeholder="Buscar no blog...">
+      <button type="submit">Buscar</button>
+    </form>
+  </div>
+</aside></div>
+</div></main>
+
+<footer class="site">
+  <div class="wrap">
+    <div>&copy; larverde.com.br — Jardinagem, plantas e casa com vida</div>
+    <div class="links"><a href="/politica-de-privacidade/">Política de Privacidade</a><a href="/termos-de-uso/">Termos de Uso</a><a href="/transparencia/">Página de Transparência</a><a href="/contato/">Contato</a><a href="/sobre/">Sobre o Lar Verde</a></div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var btn = document.querySelector('.nav-toggle');
+  var nav = document.querySelector('nav.cats');
+  if(btn && nav){ btn.addEventListener('click', function(){ nav.classList.toggle('open'); }); }
+});
+</script>
+</body>
+</html>
