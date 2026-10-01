@@ -77,7 +77,8 @@ article.post .content figure{margin:1.6em 0}
 
 /* author box + related posts */
 .author-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin:36px 0}
-.author-box .avatar{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;flex-shrink:0}
+.author-box .avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.author-photo{margin:0 0 24px;max-width:320px}.author-photo img{width:100%;height:auto;border-radius:12px}
 .author-box h4{margin:0 0 6px;font-size:1rem}
 .author-box p{margin:0;color:var(--muted);font-size:.92rem}
 .related{margin:36px 0}
@@ -135,12 +136,6 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <div class="layout"><div class="col-main">
 <div class="hero"><h1>Jardinagem Prática</h1><p>Guias do dia a dia para cuidar do jardim e da casa: rotina, ferramentas, pássaros, pets e hábitos.</p></div>
 <div class="postcard">
-  <div class="cats"><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a></div>
-  <h2><a href="/decoracao-mesa-elementos-naturais/">Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo</a></h2>
-  <div class="thumb"><a href="/decoracao-mesa-elementos-naturais/"><img src="/assets/images/decoracao-mesa-elementos-naturais-madeira-linho.webp" alt="Decoração de Mesa com Elementos Naturais: Beleza, Sustentabilidade e Estilo" width="1200" height="675" loading="lazy"></a></div>
-  <div class="excerpt">Quando a mesa vira paisagem. Tem dias em que a gente olha para a mesa da sala de jantar e sente que falta vida. Falta textura, história, cheiro de mato depois da chuva. Ou seja, falta aquela conexão q</div>
-  <div class="byline">Marcos Kulenkampff &middot; 14/01/2026</div>
-</div><div class="postcard">
   <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
   <h2><a href="/plantas-que-se-adaptam-a-sombra/">Plantas que se Adaptam à Sombra: Guia Completo para Ambientes com Pouca Luz</a></h2>
   <div class="thumb"><a href="/plantas-que-se-adaptam-a-sombra/"><img src="/assets/images/plantas-de-sombra-sala-apartamento.webp" alt="Plantas que se Adaptam à Sombra: Guia Completo para Ambientes com Pouca Luz" width="1200" height="675" loading="lazy"></a></div>
@@ -194,6 +189,12 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
   <div class="thumb"><a href="/decorar-varandas-pequenas/"><img src="/assets/images/varanda-pequena-decorada-plantas-apartamento.webp" alt="Decorar Varandas Pequenas: Ideias Criativas e Funcionais para Transformar seu Espaço" width="1200" height="675" loading="lazy"></a></div>
   <div class="excerpt">Por que resolvi escrever sobre decorar varandas pequenas. Vou ser completamente transparente com você: durante anos eu literalmente ignorei minha varanda. Era pequena demais, estreita demais, "não val</div>
   <div class="byline">Marcos Kulenkampff &middot; 07/01/2026</div>
+</div><div class="postcard">
+  <div class="cats"><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a></div>
+  <h2><a href="/flores-para-cultivar-em-apartamento/">Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados</a></h2>
+  <div class="thumb"><a href="/flores-para-cultivar-em-apartamento/"><img src="/assets/images/flores-em-apartamento-luz-natural.webp" alt="Flores para Cultivar em Apartamento: Guia Completo com Espécies e Cuidados" width="1200" height="675" loading="lazy"></a></div>
+  <div class="excerpt">Por que eu comecei a cultivar flores em apartamento. Vou ser sincera com você: durante anos, achei que flores eram coisa de casa com quintal. Morando em apartamento desde os 22 anos, eu me conformei c</div>
+  <div class="byline">Marcos Kulenkampff &middot; 06/01/2026</div>
 </div>
 <div class="pagination"><a href="/categoria/jardinagem-pratica/">1</a><span class="current">2</span><a href="/categoria/jardinagem-pratica/page/3/">3</a><a href="/categoria/jardinagem-pratica/page/4/">4</a></div>
 </div>
@@ -208,10 +209,6 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="recent-item">
       <img src="/assets/images/erro-excesso-agua-plantas-sombra.webp" alt="">
       <div class="t"><a href="/folhas-amarelas-agua-luz-ou-envelhecimento/">Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real</a></div>
-    </div>
-    <div class="recent-item">
-      <img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="">
-      <div class="t"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/">10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo</a></div>
     </div>
     <div class="recent-item">
       <img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="">
@@ -233,14 +230,18 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="">
       <div class="t"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/">Arranjos de Flores Simples e Bonitos: Como Montar em Casa</a></div>
     </div>
+    <div class="recent-item">
+      <img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="">
+      <div class="t"><a href="/cultivo-orquideas-em-casa-mitos-verdades/">Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais</a></div>
+    </div>
   </div>
   <div class="widget">
     <h3>Arquivos</h3>
-    <ul class="archive-list"><li><a href="/arquivo/2026-09/">Setembro de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">28</span></li><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">6</span></li></ul>
+    <ul class="archive-list"><li><a href="/arquivo/2026-09/">Setembro de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">28</span></li><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">6</span></li></ul>
   </div>
   <div class="widget">
     <h3>Categorias</h3>
-    <ul class="cat-list"><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">4</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">32</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">9</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">17</span></li><li><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a> <span class="count">2</span></li></ul>
+    <ul class="cat-list"><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">4</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">31</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">8</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">17</span></li><li><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a> <span class="count">2</span></li></ul>
   </div>
   <div class="widget">
     <h3>Pesquisar</h3>

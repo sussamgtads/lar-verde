@@ -79,7 +79,8 @@ article.post .content figure{margin:1.6em 0}
 
 /* author box + related posts */
 .author-box{display:flex;gap:16px;align-items:flex-start;background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;margin:36px 0}
-.author-box .avatar{width:56px;height:56px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.3rem;flex-shrink:0}
+.author-box .avatar{width:56px;height:56px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.author-photo{margin:0 0 24px;max-width:320px}.author-photo img{width:100%;height:auto;border-radius:12px}
 .author-box h4{margin:0 0 6px;font-size:1rem}
 .author-box p{margin:0;color:var(--muted);font-size:.92rem}
 .related{margin:36px 0}
@@ -625,13 +626,13 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
 <h3 class="wp-block-heading">Conheça mais</h3></div>
   
   <div class="author-box">
-  <div class="avatar">MK</div>
+  <img class="avatar" src="/assets/images/marcos-avatar.webp" alt="Marcos Kulenkampff" width="56" height="56" loading="lazy">
   <div>
     <h4>Escrito por <a href="/autor-marcos-kulenkampff/">Marcos Kulenkampff</a></h4>
-    <p>Marcos Kulenkampff é o criador do Lar Verde. Aprendeu jardinagem na prática — errando, perdendo planta, testando técnica que não funcionou — cultivando em espaços pequenos reais, sem romantização.</p>
+    <p>Marcos Kulenkampff é o criador do Lar Verde e entusiasta de plantas, jardinagem doméstica e cultivo em pequenos espaços, em São Paulo.</p>
   </div>
 </div>
-  <div class="related"><h3>Leia também</h3><ul><li><a href="/planta-com-sede-ou-afogada-sinais/">Sua Planta Está com Sede ou Afogada? Os Sinais que Confundem Todo Iniciante</a></li><li><a href="/folhas-amarelas-agua-luz-ou-envelhecimento/">Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real</a></li><li><a href="/ideias-para-deixar-banheiro-verde-sustentavel/">10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo</a></li></ul></div>
+  <div class="related"><h3>Leia também</h3><ul><li><a href="/planta-com-sede-ou-afogada-sinais/">Sua Planta Está com Sede ou Afogada? Os Sinais que Confundem Todo Iniciante</a></li><li><a href="/folhas-amarelas-agua-luz-ou-envelhecimento/">Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real</a></li><li><a href="/como-montar-comedouro-de-passaros-caseiro/">Como Montar um Comedouro de Pássaros Caseiro e Aproximar-se da Natureza</a></li></ul></div>
   <a class="backlink" href="/">&larr; Voltar para o início</a>
 </article>
 </div>
@@ -646,10 +647,6 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
     <div class="recent-item">
       <img src="/assets/images/erro-excesso-agua-plantas-sombra.webp" alt="">
       <div class="t"><a href="/folhas-amarelas-agua-luz-ou-envelhecimento/">Folhas Amarelas: Água, Luz ou Idade? Veja Como Descobrir a Causa Real</a></div>
-    </div>
-    <div class="recent-item">
-      <img src="/assets/images/torneira-economizadora-descarga-dupla-plantas-banheiro.webp" alt="">
-      <div class="t"><a href="/ideias-para-deixar-banheiro-verde-sustentavel/">10 Ideias Infalíveis para Deixar seu Banheiro Mais Verde e Sustentável Hoje Mesmo</a></div>
     </div>
     <div class="recent-item">
       <img src="/assets/images/comedouro-passaros-caseiro-madeira-plastico.webp" alt="">
@@ -671,14 +668,18 @@ footer.site .links{display:flex;gap:16px;flex-wrap:wrap;margin-top:10px}
       <img src="/assets/images/arranjo-de-flores-simples-mesa-casa.webp" alt="">
       <div class="t"><a href="/arranjos-de-flores-simples-e-bonitos-como-montar-em-casa/">Arranjos de Flores Simples e Bonitos: Como Montar em Casa</a></div>
     </div>
+    <div class="recent-item">
+      <img src="/assets/images/orquideas-em-casa-luz-natural.webp" alt="">
+      <div class="t"><a href="/cultivo-orquideas-em-casa-mitos-verdades/">Cultivo de Orquídeas em Casa: Mitos, Verdades e Cuidados Essenciais</a></div>
+    </div>
   </div>
   <div class="widget">
     <h3>Arquivos</h3>
-    <ul class="archive-list"><li><a href="/arquivo/2026-09/">Setembro de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">28</span></li><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">6</span></li></ul>
+    <ul class="archive-list"><li><a href="/arquivo/2026-09/">Setembro de 2026</a> <span class="count">2</span></li><li><a href="/arquivo/2026-03/">Março de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-02/">Fevereiro de 2026</a> <span class="count">1</span></li><li><a href="/arquivo/2026-01/">Janeiro de 2026</a> <span class="count">28</span></li><li><a href="/arquivo/2025-12/">Dezembro de 2025</a> <span class="count">6</span></li></ul>
   </div>
   <div class="widget">
     <h3>Categorias</h3>
-    <ul class="cat-list"><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">4</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">32</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">9</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">17</span></li><li><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a> <span class="count">2</span></li></ul>
+    <ul class="cat-list"><li><a href="/categoria/decoracao-e-espacos-pequenos/">Decoração e Espaços Pequenos</a> <span class="count">4</span></li><li><a href="/categoria/horta-e-ervas-em-casa/">Horta e Ervas em Casa</a> <span class="count">7</span></li><li><a href="/categoria/jardinagem-pratica/">Jardinagem Prática</a> <span class="count">31</span></li><li><a href="/categoria/jardinagem-sustentavel/">Jardinagem Sustentável</a> <span class="count">8</span></li><li><a href="/categoria/plantas-e-cuidados/">Plantas e Cuidados</a> <span class="count">17</span></li><li><a href="/categoria/diagnostico-de-plantas/">diagnóstico de plantas</a> <span class="count">2</span></li></ul>
   </div>
   <div class="widget">
     <h3>Pesquisar</h3>
